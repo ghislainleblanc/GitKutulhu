@@ -85,22 +85,28 @@ final class BranchStore {
 
     func commit(_ message: String) async -> Bool {
         guard !isBusy, let root = repository?.root else { return false }
+
         error = nil
         isBusy = true
+
         defer { isBusy = false }
+
         do {
             try await service.commit(message, at: root)
         } catch {
             self.error = error.localizedDescription
             repository = try? await service.snapshot(at: root)
+
             return false
         }
+
         // A refresh failure must not imply the commit failed or invite a duplicate.
         do {
             repository = try await service.snapshot(at: root)
         } catch {
             self.error = error.localizedDescription
         }
+
         return true
     }
 

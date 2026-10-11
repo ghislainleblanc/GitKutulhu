@@ -90,39 +90,51 @@ actor GitBranchService {
 
     func workingChanges(at root: URL) throws -> [GitWorkingFile] {
         let output = try run(["--literal-pathspecs", "status", "--porcelain=v1", "-z", "--untracked-files=all", "--no-renames"], at: root)
+
         return output.split(separator: "\0").flatMap { record -> [GitWorkingFile] in
             guard record.count >= 4 else { return [] }
+
             let index = record.first!
             let worktree = record.dropFirst().first!
             let path = String(record.dropFirst(3))
+
             if index == "?" {
                 return [GitWorkingFile(path: path, staged: false, status: "?", conflicted: false)]
             }
+
             let conflict = index == "U" || worktree == "U" || (index == "A" && worktree == "A") || (index == "D" && worktree == "D")
+
             if conflict {
                 return [GitWorkingFile(path: path, staged: false, status: "U", conflicted: true)]
             }
+
             var files: [GitWorkingFile] = []
+
             if index != " " {
                 files.append(GitWorkingFile(path: path, staged: true, status: String(index), conflicted: false))
             }
+
             if worktree != " " {
                 files.append(GitWorkingFile(path: path, staged: false, status: String(worktree), conflicted: false))
             }
+
             return files
         }
     }
 
     func workingDiff(for file: GitWorkingFile, at root: URL) throws -> String {
         var arguments = ["--literal-pathspecs", "-c", "color.ui=false", "diff", "--no-ext-diff", "--no-textconv", "--no-renames", "--src-prefix=a/", "--dst-prefix=b/"]
+
         if file.status == "?" {
             arguments += ["--no-index", "--", "/dev/null", file.path]
         } else {
             if file.staged {
                 arguments.append("--cached")
             }
+
             arguments += ["--", file.path]
         }
+
         return try run(arguments, at: root, allowedStatuses: file.status == "?" ? [0, 1] : [0])
     }
 
@@ -133,6 +145,7 @@ actor GitBranchService {
 
     func unstage(_ file: GitWorkingFile, at root: URL) throws {
         let head = try run(["rev-parse", "--verify", "--quiet", "HEAD"], at: root, allowedStatuses: [0, 1])
+
         if head.isEmpty {
             // An unborn branch has no tree to reset to. Preserve the working file.
             try run(["--literal-pathspecs", "rm", "--cached", "-f", "--", file.path], at: root)
@@ -145,6 +158,7 @@ actor GitBranchService {
         guard !message.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
             throw GitOperationError(errorDescription: String(localized: "Enter a commit summary."))
         }
+
         // Do not add -a: commit exactly the index, leaving unstaged edits alone.
         try run(["commit", "-m", message], at: root)
     }

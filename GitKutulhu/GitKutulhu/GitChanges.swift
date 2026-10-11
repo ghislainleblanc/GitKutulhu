@@ -34,6 +34,7 @@ nonisolated struct GitDiffRow: Sendable {
                                        oldLine: index < removed.count ? removed[index].1 : nil,
                                        newLine: index < added.count ? added[index].1 : nil, changed: true))
             }
+
             removed = []
             added = []
         }
@@ -41,6 +42,7 @@ nonisolated struct GitDiffRow: Sendable {
         for line in patch.components(separatedBy: "\n") {
             if line.hasPrefix("@@ ") {
                 flush()
+
                 let fields = line.split(separator: " ")
                 oldLine = Int(fields[1].dropFirst().split(separator: ",")[0]) ?? 0
                 newLine = Int(fields[2].dropFirst().split(separator: ",")[0]) ?? 0
@@ -62,7 +64,9 @@ nonisolated struct GitDiffRow: Sendable {
                 rows.append(GitDiffRow(before: line, after: line, oldLine: nil, newLine: nil, changed: false))
             }
         }
+
         flush()
+
         return rows
     }
 }
@@ -103,6 +107,7 @@ final class ChangesStore {
     func reload(at root: URL?) async {
         let request = UUID()
         self.request = request
+
         if self.root != root {
             self.root = root
             files = []
@@ -113,24 +118,33 @@ final class ChangesStore {
             diffRequest = UUID()
             isLoadingDiff = false
         }
+
         error = nil
         isLoading = true
+
         guard let root else {
             isLoading = false
             return
         }
+
         do {
             let files = try await service.workingChanges(at: root)
+
             guard self.request == request, !Task.isCancelled else { return }
+
             self.files = files
+
             if !files.contains(where: { $0.id == selectedID }) {
                 selectedID = files.first?.id
             }
         } catch {
             guard self.request == request, !Task.isCancelled else { return }
+
             self.error = error.localizedDescription
         }
+
         isLoading = false
+
         await loadDiff()
     }
 
@@ -138,25 +152,33 @@ final class ChangesStore {
         let request = UUID()
         diffRequest = request
         diffError = nil
+
         guard let root, let file = selectedFile else {
             patch = ""
             isLoadingDiff = false
             return
         }
+
         if displayedID != file.id {
             patch = ""
         }
+
         displayedID = file.id
         isLoadingDiff = true
+
         do {
             let patch = try await service.workingDiff(for: file, at: root)
+
             guard diffRequest == request, !Task.isCancelled, selectedID == file.id else { return }
+
             self.patch = patch
         } catch {
             guard diffRequest == request, !Task.isCancelled, selectedID == file.id else { return }
+
             patch = ""
             diffError = error.localizedDescription
         }
+
         isLoadingDiff = false
     }
 }

@@ -35,6 +35,7 @@ struct ContentView: View {
                         VStack(spacing: 0) {
                             Text("Conflict resolution is a sample preview. No repository is modified here.")
                                 .font(.caption).foregroundStyle(Palette.muted).padding(10)
+
                             ConflictView(workspace: $workspace)
                         }
                     }
