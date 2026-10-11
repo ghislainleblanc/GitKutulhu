@@ -12,30 +12,38 @@ final class BranchStore {
 
     var branchLabel: String {
         guard let repository else { return String(localized: "No repository") }
+
         return repository.currentBranch ?? String(localized: "Detached HEAD")
     }
 
     func openRepository() {
         guard !isBusy else { return }
+
         let panel = NSOpenPanel()
         panel.canChooseDirectories = true
         panel.canChooseFiles = false
         panel.allowsMultipleSelection = false
         panel.prompt = String(localized: "Open repository")
+
         guard panel.runModal() == .OK, let folder = panel.url else { return }
+
         perform { try await self.service.snapshot(at: folder) }
     }
 
     func refresh() {
         guard let root = repository?.root else { return }
+
         perform { try await self.service.snapshot(at: root) }
     }
 
     func create(_ name: String) async -> Bool {
         guard !isBusy, let root = repository?.root else { return false }
+
         error = nil
         isBusy = true
+
         defer { isBusy = false }
+
         do {
             try await service.create(name, at: root)
             repository = try await service.snapshot(at: root)
@@ -65,7 +73,9 @@ final class BranchStore {
 
     func push() {
         guard let branch = repository?.currentBranch, !selectedRemote.isEmpty else { return }
+
         let remote = selectedRemote
+
         mutate { root in try await self.service.push(branch, to: remote, at: root) }
     }
 }
@@ -73,6 +83,7 @@ final class BranchStore {
 private extension BranchStore {
     func mutate(_ operation: @escaping @MainActor (URL) async throws -> Void) {
         guard let root = repository?.root else { return }
+
         perform {
             do {
                 try await operation(root)
@@ -81,18 +92,23 @@ private extension BranchStore {
                 self.repository = try? await self.service.snapshot(at: root)
                 throw error
             }
+
             return try await self.service.snapshot(at: root)
         }
     }
 
     func perform(_ operation: @escaping @MainActor () async throws -> GitRepositorySnapshot) {
         guard !isBusy else { return }
+
         error = nil
         isBusy = true
+
         Task {
             defer { isBusy = false }
+
             do {
                 repository = try await operation()
+
                 if let remotes = repository?.remotes, !remotes.contains(selectedRemote) {
                     selectedRemote = remotes.contains("origin") ? "origin" : remotes.first ?? ""
                 }

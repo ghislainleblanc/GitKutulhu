@@ -11,16 +11,23 @@ struct ContentView: View {
     var body: some View {
         VStack(spacing: 0) {
             WorkspaceToolbar(store: branches, createBranch: { showsBranchSheet = true })
+
             Divider()
+
             HStack(spacing: 0) {
                 RepositorySidebar(store: branches, section: $section, createBranch: { showsBranchSheet = true })
                     .frame(width: 218)
+
                 Divider()
+
                 VStack(spacing: 0) {
                     WorkspaceHeader(section: $section, search: $search)
+
                     Divider()
+
                     Text("History, changes, and conflicts are sample previews. Branch operations affect the connected repository.")
                         .font(.caption).foregroundStyle(Palette.muted).padding(10)
+
                     switch section {
                     case .history:
                         HistoryView(search: search)
@@ -32,7 +39,9 @@ struct ContentView: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
+
             Divider()
+
             WorkspaceStatusBar(store: branches)
         }
         .background(Palette.background)

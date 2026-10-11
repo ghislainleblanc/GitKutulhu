@@ -29,6 +29,7 @@ struct ChangeCount: View {
     var body: some View {
         HStack(spacing: 8) {
             Text("+\(additions.formatted())").foregroundStyle(Palette.accent)
+
             Text("−\(deletions.formatted())").foregroundStyle(.red.opacity(0.9))
         }.font(.system(.caption2, design: .monospaced))
     }
