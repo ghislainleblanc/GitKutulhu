@@ -1,24 +1,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var branches = BranchStore()
     @State private var workspace = DemoWorkspace()
     @State private var section: WorkspaceSection = .history
     @State private var search = ""
     @State private var showsBranchSheet = false
     @State private var branchName = ""
-    @State private var notice: String?
 
     var body: some View {
         VStack(spacing: 0) {
-            WorkspaceToolbar(branch: workspace.branch, createBranch: { showsBranchSheet = true }, action: showDemoNotice)
+            WorkspaceToolbar(store: branches, createBranch: { showsBranchSheet = true })
             Divider()
             HStack(spacing: 0) {
-                RepositorySidebar(workspace: $workspace, section: $section, createBranch: { showsBranchSheet = true })
+                RepositorySidebar(store: branches, section: $section, createBranch: { showsBranchSheet = true })
                     .frame(width: 218)
                 Divider()
                 VStack(spacing: 0) {
                     WorkspaceHeader(section: $section, search: $search)
                     Divider()
+                    Text("History, changes, and conflicts are sample previews. Branch operations affect the connected repository.")
+                        .font(.caption).foregroundStyle(Palette.muted).padding(10)
                     switch section {
                     case .history:
                         HistoryView(search: search)
@@ -31,7 +33,7 @@ struct ContentView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
             Divider()
-            WorkspaceStatusBar(branch: workspace.branch)
+            WorkspaceStatusBar(store: branches)
         }
         .background(Palette.background)
         .foregroundStyle(Palette.text)
@@ -39,32 +41,29 @@ struct ContentView: View {
         .preferredColorScheme(.dark)
         .frame(minWidth: 1080, minHeight: 700)
         .sheet(isPresented: $showsBranchSheet) {
-            BranchSheet(name: $branchName) {
-                let name = branchName.trimmingCharacters(in: .whitespacesAndNewlines)
-                guard !name.isEmpty else { return }
-                if !workspace.branches.contains(name) {
-                    workspace.branches.append(name)
+            BranchSheet(name: $branchName, isBusy: branches.isBusy, error: branches.error) {
+                Task {
+                    if await branches.create(branchName.trimmingCharacters(in: .whitespacesAndNewlines)) {
+                        branchName = ""
+                        showsBranchSheet = false
+                    }
                 }
-                workspace.branch = name
-                branchName = ""
-                showsBranchSheet = false
             }
         }
-        .alert("Demo workspace", isPresented: Binding(get: { notice != nil }, set: {
+        .alert("Git operation failed", isPresented: Binding(get: { branches.error != nil && !showsBranchSheet }, set: {
             if !$0 {
-                notice = nil
+                branches.error = nil
             }
         })) {
-            Button("OK", role: .cancel) { notice = nil }
+            Button("OK", role: .cancel) { branches.error = nil }
         } message: {
-            Text(notice ?? "")
+            Text(verbatim: branches.error ?? "")
         }
-    }
-}
-
-private extension ContentView {
-    func showDemoNotice() {
-        notice = String(localized: "This is a UI preview. Connect a repository to enable Git operations.")
+        .onChange(of: showsBranchSheet) { _, shown in
+            if !shown {
+                branchName = ""
+            }
+        }
     }
 }
 

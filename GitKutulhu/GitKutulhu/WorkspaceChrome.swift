@@ -1,38 +1,39 @@
 import SwiftUI
 
 struct WorkspaceToolbar: View {
-    let branch: String
+    @Bindable var store: BranchStore
     let createBranch: () -> Void
-    let action: () -> Void
 
     var body: some View {
-        HStack(spacing: 22) {
-            HStack(spacing: 10) {
+        HStack(spacing: 18) {
+            Label { Text(verbatim: "GitKutulhu") } icon: {
                 Image(systemName: "point.3.connected.trianglepath.dotted")
-                    .font(.title2).foregroundStyle(Palette.accent)
-                Text(verbatim: "GitKutulhu").font(.headline)
-            }
-            .frame(width: 194, alignment: .leading)
-            Label { Text(verbatim: "GitKutulhu") } icon: { Image(systemName: "folder") }
-                .font(.callout.weight(.medium))
-            Image(systemName: "chevron.right").font(.caption).foregroundStyle(Palette.muted)
-            Label { Text(verbatim: branch) } icon: { Image(systemName: "arrow.triangle.branch") }
-                .foregroundStyle(Palette.accent).font(.callout)
+            }.font(.headline).foregroundStyle(Palette.accent)
+            Button(action: store.openRepository) { Label("Open repository", systemImage: "folder") }
+            Text(verbatim: store.repository?.root.lastPathComponent ?? "").lineLimit(1)
+            Label { Text(verbatim: store.branchLabel) } icon: { Image(systemName: "arrow.triangle.branch") }
+                .foregroundStyle(Palette.accent).lineLimit(1)
             Spacer()
-            Button(action: action) { Label("Fetch", systemImage: "arrow.down.circle") }
-                .help("Fetch remote changes")
-            Button(action: action) { Label("Pull", systemImage: "arrow.down") }
-            Button(action: action) { Label("Push", systemImage: "arrow.up") }
-            Divider().frame(height: 20)
-            Button(action: createBranch) { Label("Branch", systemImage: "arrow.triangle.branch") }
-            Menu {
-                Button("Merge into current branch", action: action)
-                Button("Rebase current branch", action: action)
-            } label: {
-                Label("Integrate", systemImage: "arrow.triangle.merge")
+            if store.isBusy {
+                ProgressView().controlSize(.small)
             }
-            .menuStyle(.borderlessButton).fixedSize()
+            Button(action: store.refresh) { Label("Refresh", systemImage: "arrow.clockwise") }
+                .disabled(store.repository == nil)
+            Button(action: store.fetch) { Label("Fetch", systemImage: "arrow.down.circle") }
+                .help("Fetch remote changes").disabled(store.repository?.remotes.isEmpty != false)
+            Picker("Remote", selection: $store.selectedRemote) {
+                if store.selectedRemote.isEmpty {
+                    Text("No remote").tag("")
+                }
+                ForEach(store.repository?.remotes ?? [], id: \.self) { Text(verbatim: $0).tag($0) }
+            }.frame(maxWidth: 140)
+            Button(action: store.push) { Label("Push branch", systemImage: "arrow.up") }
+                .help("Publish the current branch to the selected remote")
+                .disabled(store.repository?.currentBranch == nil || store.selectedRemote.isEmpty)
+            Button(action: createBranch) { Label("Branch", systemImage: "arrow.triangle.branch") }
+                .disabled(store.repository == nil)
         }
+        .disabled(store.isBusy)
         .buttonStyle(.borderless)
         .padding(.horizontal, 20).frame(height: 58)
         .background(Palette.panel)
@@ -40,64 +41,108 @@ struct WorkspaceToolbar: View {
 }
 
 struct RepositorySidebar: View {
-    @Binding var workspace: DemoWorkspace
+    let store: BranchStore
     @Binding var section: WorkspaceSection
     let createBranch: () -> Void
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 22) {
-            VStack(alignment: .leading, spacing: 5) {
-                Text("WORKSPACE").font(.caption2.weight(.semibold)).foregroundStyle(Palette.muted)
-                Text(verbatim: "GitKutulhu").font(.title3.weight(.semibold))
-                Text("Local repository · Demo").font(.caption).foregroundStyle(Palette.muted)
-            }
-            VStack(spacing: 5) {
-                SidebarItem(title: "Commit history", icon: "clock.arrow.circlepath", selected: section == .history) { section = .history }
-                SidebarItem(title: "Working changes", icon: "square.and.pencil", count: workspace.committed ? 0 : 3, selected: section == .changes) { section = .changes }
-                SidebarItem(title: "Merge conflicts", icon: "exclamationmark.triangle", count: workspace.resolved ? 0 : 1, selected: section == .conflicts) { section = .conflicts }
-            }
-            VStack(alignment: .leading, spacing: 10) {
-                HStack {
-                    Text("LOCAL BRANCHES").font(.caption2.weight(.semibold)).foregroundStyle(Palette.muted)
-                    Spacer()
-                    Button(action: createBranch) { Image(systemName: "plus") }
-                        .buttonStyle(.plain).help("Create branch").accessibilityLabel("Create branch")
-                }
-                ForEach(workspace.branches, id: \.self) { branch in
-                    Button { workspace.branch = branch } label: {
-                        HStack(spacing: 9) {
-                            Image(systemName: "arrow.triangle.branch")
-                            Text(verbatim: branch).lineLimit(1).truncationMode(.middle)
-                            Spacer(minLength: 0)
-                            if workspace.branch == branch {
-                                Image(systemName: "checkmark").font(.caption2)
-                            }
-                        }
-                        .font(.caption)
-                        .foregroundStyle(workspace.branch == branch ? Palette.accent : Palette.muted)
-                        .padding(.vertical, 7).padding(.horizontal, 8)
-                        .background(workspace.branch == branch ? Palette.accent.opacity(0.08) : .clear, in: RoundedRectangle(cornerRadius: 6))
+        ScrollView {
+            VStack(alignment: .leading, spacing: 22) {
+                VStack(alignment: .leading, spacing: 5) {
+                    Text("WORKSPACE").font(.caption2.weight(.semibold)).foregroundStyle(Palette.muted)
+                    Text(verbatim: store.repository?.root.lastPathComponent ?? String(localized: "No repository"))
+                        .font(.title3.weight(.semibold))
+                    if let root = store.repository?.root {
+                        Text(verbatim: root.path).font(.caption).foregroundStyle(Palette.muted).textSelection(.enabled)
+                    } else {
+                        Text("Open a local clone to manage its GitHub branches.").font(.caption).foregroundStyle(Palette.muted)
                     }
-                    .buttonStyle(.plain)
+                }
+                VStack(spacing: 5) {
+                    SidebarItem(title: "Commit history", icon: "clock.arrow.circlepath", selected: section == .history) { section = .history }
+                    SidebarItem(title: "Working changes", icon: "square.and.pencil", selected: section == .changes) { section = .changes }
+                    SidebarItem(title: "Merge conflicts", icon: "exclamationmark.triangle", selected: section == .conflicts) { section = .conflicts }
+                }
+                VStack(alignment: .leading, spacing: 10) {
+                    HStack {
+                        Text("LOCAL BRANCHES").font(.caption2.weight(.semibold)).foregroundStyle(Palette.muted)
+                        Spacer()
+                        Button(action: createBranch) { Image(systemName: "plus") }
+                            .buttonStyle(.plain).help("Create branch").accessibilityLabel("Create branch")
+                            .disabled(store.repository == nil || store.isBusy)
+                    }
+                    ForEach(store.repository?.branches.filter { $0.remote == nil } ?? []) { branch in
+                        RepositoryBranchRow(store: store, branch: branch)
+                    }
+                }
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("REMOTE BRANCHES").font(.caption2.weight(.semibold)).foregroundStyle(Palette.muted)
+                    ForEach(store.repository?.branches.filter { $0.remote != nil } ?? []) { branch in
+                        RepositoryBranchRow(store: store, branch: branch)
+                    }
+                    Text("Fetch to update remote branches.").font(.caption).foregroundStyle(Palette.muted)
+                }
+            }.padding(16)
+        }.background(Palette.panel)
+    }
+}
+
+struct RepositoryBranchRow: View {
+    let store: BranchStore
+    let branch: GitBranch
+    @State private var showsRename = false
+    @State private var showsDelete = false
+    @State private var name = ""
+
+    var isCurrent: Bool {
+        branch.remote == nil && store.repository?.currentBranch == branch.name
+    }
+
+    var displayName: String {
+        branch.remote.map { $0 + "/" + branch.name } ?? branch.name
+    }
+
+    var body: some View {
+        Button { store.checkout(branch) } label: {
+            HStack(spacing: 9) {
+                Image(systemName: "arrow.triangle.branch")
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(verbatim: displayName).lineLimit(1).truncationMode(.middle)
+                    if !branch.upstream.isEmpty {
+                        Text(verbatim: branch.upstream).font(.caption2).foregroundStyle(Palette.muted)
+                    }
+                }
+                Spacer(minLength: 0)
+                if isCurrent {
+                    Image(systemName: "checkmark").font(.caption2)
                 }
             }
-            VStack(alignment: .leading, spacing: 12) {
-                Text("REMOTES").font(.caption2.weight(.semibold)).foregroundStyle(Palette.muted)
-                Label { Text(verbatim: "origin") } icon: { Image(systemName: "network") }
-                Text(verbatim: "origin/main").padding(.leading, 25)
-                Text(verbatim: "origin/develop").padding(.leading, 25)
-            }
-            .font(.caption).foregroundStyle(Palette.muted)
-            Spacer()
-            VStack(alignment: .leading, spacing: 9) {
-                Label("Your workflow, in focus.", systemImage: "sparkles").foregroundStyle(Palette.accent)
-                Text("Review changes. Resolve conflicts. Keep moving.").foregroundStyle(Palette.muted)
-            }
-            .font(.caption).padding(12)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background(Palette.raised, in: RoundedRectangle(cornerRadius: 8))
+            .font(.caption).foregroundStyle(isCurrent ? Palette.accent : Palette.muted)
+            .padding(.vertical, 7).padding(.horizontal, 8)
+            .background(isCurrent ? Palette.accent.opacity(0.08) : .clear, in: RoundedRectangle(cornerRadius: 6))
         }
-        .padding(16).background(Palette.panel)
+        .buttonStyle(.plain).disabled(store.isBusy)
+        .help("Check out branch")
+        .contextMenu {
+            Button("Check out branch") { store.checkout(branch) }.disabled(isCurrent || store.isBusy)
+            if branch.remote == nil {
+                Button("Rename branch") { name = branch.name; showsRename = true }.disabled(store.isBusy)
+                Button("Delete local branch", role: .destructive) { showsDelete = true }.disabled(isCurrent || store.isBusy)
+            }
+        }
+        .alert("Rename branch", isPresented: $showsRename) {
+            TextField("Branch name", text: $name)
+            Button("Cancel", role: .cancel) {}
+            Button("Rename") { store.rename(branch, to: name) }.disabled(name.isEmpty)
+        } message: {
+            Text("Renaming affects the local branch only.")
+        }
+        .confirmationDialog("Delete local branch?", isPresented: $showsDelete, titleVisibility: .visible) {
+            Button("Delete local branch", role: .destructive) { store.delete(branch) }
+        } message: {
+            Text(verbatim: branch.name)
+            Text("The remote branch is preserved. Git will refuse to delete an unmerged branch.")
+        }
     }
 }
 
@@ -151,23 +196,29 @@ struct WorkspaceHeader: View {
 struct BranchSheet: View {
     @Environment(\.dismiss) private var dismiss
     @Binding var name: String
+    let isBusy: Bool
+    let error: String?
     let create: () -> Void
 
     var body: some View {
         VStack(alignment: .leading, spacing: 18) {
             Label("Create branch", systemImage: "arrow.triangle.branch").font(.title2.weight(.semibold))
-            Text("Create and check out a branch in the demo workspace.").foregroundStyle(Palette.muted)
+            Text("Create and check out a local branch from the current HEAD. Push to publish it on GitHub.").foregroundStyle(Palette.muted)
             TextField("Branch name", text: $name).onSubmit {
-                if isValid {
+                if isValid, !isBusy {
                     create()
                 }
             }
+            if let error {
+                Text(verbatim: error).font(.caption).foregroundStyle(.red).textSelection(.enabled)
+            }
             HStack {
                 Spacer()
-                Button("Cancel", role: .cancel) { dismiss() }.keyboardShortcut(.cancelAction)
-                Button("Create branch", action: create).buttonStyle(.borderedProminent).disabled(!isValid).keyboardShortcut(.defaultAction)
+                Button("Cancel", role: .cancel) { dismiss() }.disabled(isBusy).keyboardShortcut(.cancelAction)
+                Button("Create branch", action: create).buttonStyle(.borderedProminent).disabled(!isValid || isBusy).keyboardShortcut(.defaultAction)
             }
-        }.padding(24).frame(width: 420).tint(Palette.accent)
+        }.padding(24).frame(width: 480).tint(Palette.accent)
+            .interactiveDismissDisabled(isBusy)
     }
 
     private var isValid: Bool {
@@ -177,16 +228,16 @@ struct BranchSheet: View {
 }
 
 struct WorkspaceStatusBar: View {
-    let branch: String
+    let store: BranchStore
 
     var body: some View {
         HStack(spacing: 14) {
             Circle().fill(Palette.accent).frame(width: 6, height: 6)
-            Text("Demo workspace").foregroundStyle(Palette.muted)
+            Text(store.isBusy ? LocalizedStringKey("Running Git…") : LocalizedStringKey("Branch management")).foregroundStyle(Palette.muted)
             Divider().frame(height: 12)
-            Label { Text(verbatim: branch) } icon: { Image(systemName: "arrow.triangle.branch") }
+            Label { Text(verbatim: store.branchLabel) } icon: { Image(systemName: "arrow.triangle.branch") }
             Spacer()
-            Label("Local preview", systemImage: "internaldrive")
+            Label("Local repository", systemImage: "internaldrive")
             Text(verbatim: "GitKutulhu 0.1").foregroundStyle(Palette.muted)
         }.font(.caption2).padding(.horizontal, 18).frame(height: 30).background(Palette.panel)
     }

@@ -17,8 +17,6 @@ enum WorkspaceSection: String, CaseIterable, Identifiable {
 }
 
 struct DemoWorkspace {
-    var branch = "feature/graph-view"
-    var branches = ["main", "develop", "feature/graph-view", "fix/sidebar-layout"]
     var staged: Set<String> = []
     var selectedFile = DemoFile.samples[0].id
     var message = ""
