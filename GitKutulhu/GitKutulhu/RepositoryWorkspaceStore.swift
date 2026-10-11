@@ -27,7 +27,9 @@ final class RepositoryWorkspaceStore {
     private(set) var repositories: [RepositorySession] = []
     private(set) var selectedID: URL?
     private(set) var isOpening = false
+    private(set) var isCloning = false
     var error: String?
+    var cloneError: String?
     private let defaults: UserDefaults
     private let service = GitBranchService()
     private var didRestore = false
@@ -35,6 +37,10 @@ final class RepositoryWorkspaceStore {
 
     var selectedRepository: RepositorySession? {
         repositories.first { $0.id == selectedID }
+    }
+
+    var isBusy: Bool {
+        isOpening || isCloning
     }
 
     init(defaults: UserDefaults = .standard) {
@@ -65,7 +71,7 @@ final class RepositoryWorkspaceStore {
     }
 
     func openRepository() {
-        guard !isOpening else { return }
+        guard !isBusy else { return }
 
         let panel = NSOpenPanel()
         panel.canChooseDirectories = true
@@ -81,7 +87,7 @@ final class RepositoryWorkspaceStore {
     }
 
     func open(_ folders: [URL]) async {
-        guard !isOpening else { return }
+        guard !isBusy else { return }
 
         isOpening = true
         error = nil
@@ -92,17 +98,7 @@ final class RepositoryWorkspaceStore {
         for folder in folders {
             do {
                 let snapshot = try await service.snapshot(at: folder)
-                let root = snapshot.root.resolvingSymlinksInPath().standardizedFileURL
-
-                if let existing = repositories.first(where: { $0.root == root }) {
-                    await existing.branches.load(at: root)
-                } else {
-                    let canonicalSnapshot = GitRepositorySnapshot(root: root, currentBranch: snapshot.currentBranch, branches: snapshot.branches, remotes: snapshot.remotes)
-                    repositories.append(RepositorySession(root: root, snapshot: canonicalSnapshot))
-                }
-
-                selectedID = root
-                persist()
+                await add(snapshot)
             } catch {
                 failures.append(folder.path + "\n" + error.localizedDescription)
             }
@@ -110,6 +106,26 @@ final class RepositoryWorkspaceStore {
 
         if !failures.isEmpty {
             error = failures.joined(separator: "\n\n")
+        }
+    }
+
+    func clone(_ source: String, to destination: URL) async -> Bool {
+        guard !isBusy else { return false }
+
+        isCloning = true
+        cloneError = nil
+
+        defer { isCloning = false }
+
+        do {
+            let snapshot = try await service.clone(source, to: destination)
+            await add(snapshot)
+
+            return true
+        } catch {
+            cloneError = error.localizedDescription
+
+            return false
         }
     }
 
@@ -139,6 +155,20 @@ final class RepositoryWorkspaceStore {
 }
 
 private extension RepositoryWorkspaceStore {
+    func add(_ snapshot: GitRepositorySnapshot) async {
+        let root = snapshot.root.resolvingSymlinksInPath().standardizedFileURL
+
+        if let existing = repositories.first(where: { $0.root == root }) {
+            await existing.branches.load(at: root)
+        } else {
+            let canonicalSnapshot = GitRepositorySnapshot(root: root, currentBranch: snapshot.currentBranch, branches: snapshot.branches, remotes: snapshot.remotes)
+            repositories.append(RepositorySession(root: root, snapshot: canonicalSnapshot))
+        }
+
+        selectedID = root
+        persist()
+    }
+
     nonisolated struct SavedWorkspace: Codable {
         let paths: [String]
         let selectedPath: String?

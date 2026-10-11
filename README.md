@@ -12,6 +12,14 @@ has a tab; click a tab to switch, and hover over it to see its full path. Openin
 an already open repository, a subfolder, or a symbolic link selects the existing
 tab. Linked worktrees have their own tabs.
 
+Choose **Clone Repository** beside **Open repository** to clone an HTTPS or SSH
+URL. Choose a destination folder and a new folder name (suggested from the URL),
+then choose **Clone Repository**. Git runs in the background with a progress
+indicator, using the authentication described below. The completed clone opens
+in a new tab and is saved with the workspace. Existing destination folders are
+rejected, including empty folders. Errors stay in the dialog so you can correct
+the URL or destination and retry.
+
 The app automatically saves the open repository list and selected tab in local
 preferences and restores them at launch. Closing a tab removes it from the saved
 list without changing repository files. Unavailable repositories stay listed;
@@ -176,7 +184,9 @@ swiftc -swift-version 6 -module-cache-path /tmp/GitKutulhu-module-cache \
 
 Repository workspace checks cover opening multiple repositories, separate drafts,
 duplicate subfolders and symlinks, linked worktrees, missing-folder recovery,
-closing tabs, and restoration from saved preferences in a separate process:
+closing tabs, and restoration from saved preferences in a separate process.
+They also cover cloning populated and empty remotes, opening and restoring the
+cloned tab, preserving existing destinations and symlinks, and retrying failures:
 
 ```sh
 swiftc -swift-version 6 -module-cache-path /tmp/GitKutulhu-workspace-test-cache \

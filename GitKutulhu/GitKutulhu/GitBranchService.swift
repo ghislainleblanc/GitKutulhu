@@ -24,6 +24,25 @@ nonisolated struct GitOperationError: LocalizedError {
 
 /// Runs Git away from the main actor. Arguments never pass through a shell.
 actor GitBranchService {
+    func clone(_ source: String, to destination: URL) throws -> GitRepositorySnapshot {
+        let source = source.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        guard !source.isEmpty else {
+            throw GitOperationError(errorDescription: String(localized: "Enter a repository URL."))
+        }
+
+        // Reject even empty existing folders so a clone never reuses user files.
+        guard !FileManager.default.fileExists(atPath: destination.path),
+              (try? FileManager.default.destinationOfSymbolicLink(atPath: destination.path)) == nil
+        else {
+            throw GitOperationError(errorDescription: String(localized: "The destination already exists. Choose a different folder name."))
+        }
+
+        try run(["clone", "--", source, destination.path], at: destination.deletingLastPathComponent())
+
+        return try snapshot(at: destination)
+    }
+
     func snapshot(at folder: URL) throws -> GitRepositorySnapshot {
         let rootPath = try run(["rev-parse", "--show-toplevel"], at: folder)
         let root = URL(fileURLWithPath: rootPath, isDirectory: true)

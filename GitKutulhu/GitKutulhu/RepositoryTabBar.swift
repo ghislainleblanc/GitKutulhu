@@ -2,14 +2,23 @@ import SwiftUI
 
 struct RepositoryTabBar: View {
     let store: RepositoryWorkspaceStore
+    @State private var showsCloneSheet = false
 
     var body: some View {
         HStack(spacing: 12) {
             Button(action: store.openRepository) {
                 Label("Open repository", systemImage: "folder.badge.plus")
             }
-            .disabled(store.isOpening)
+            .disabled(store.isBusy)
             .keyboardShortcut("o", modifiers: .command)
+
+            Button {
+                store.cloneError = nil
+                showsCloneSheet = true
+            } label: {
+                Label("Clone Repository", systemImage: "square.and.arrow.down")
+            }
+            .disabled(store.isBusy)
 
             if store.isOpening {
                 ProgressView().controlSize(.small)
@@ -36,6 +45,9 @@ struct RepositoryTabBar: View {
         .buttonStyle(.borderless)
         .padding(.horizontal, 20).padding(.vertical, 10)
         .background(Palette.panel)
+        .sheet(isPresented: $showsCloneSheet) {
+            CloneRepositorySheet(store: store)
+        }
     }
 }
 

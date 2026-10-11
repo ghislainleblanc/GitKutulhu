@@ -490,6 +490,204 @@
         }
       }
     },
+    "Choose folder" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose folder"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elegir carpeta"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisir un dossier"
+          }
+        }
+      }
+    },
+    "Choose folder…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose folder…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elegir carpeta…"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisir un dossier…"
+          }
+        }
+      }
+    },
+    "Choose where to save the repository." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose where to save the repository."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elige dónde guardar el repositorio."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisissez où enregistrer le dépôt."
+          }
+        }
+      }
+    },
+    "Clone Repository" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clone Repository"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clonar repositorio"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cloner un dépôt"
+          }
+        }
+      }
+    },
+    "Clone with an HTTPS or SSH URL using your existing Git credentials." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clone with an HTTPS or SSH URL using your existing Git credentials."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clona una URL HTTPS o SSH con tus credenciales de Git existentes."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clonez une URL HTTPS ou SSH avec vos identifiants Git existants."
+          }
+        }
+      }
+    },
+    "Cloning repository…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cloning repository…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clonando repositorio…"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clonage du dépôt…"
+          }
+        }
+      }
+    },
+    "Close repository" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close repository"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerrar repositorio"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fermer le dépôt"
+          }
+        }
+      }
+    },
+    "Close repository %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close repository %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerrar repositorio %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fermer le dépôt %@"
+          }
+        }
+      }
+    },
+    "Close repository?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close repository?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Cerrar el repositorio?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fermer le dépôt ?"
+          }
+        }
+      }
+    },
     "Commit" : {
       "localizations" : {
         "en" : {
@@ -754,6 +952,28 @@
         }
       }
     },
+    "Could not open repository" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not open repository"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudo abrir el repositorio"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible d’ouvrir le dépôt"
+          }
+        }
+      }
+    },
     "Create and check out a branch in the demo workspace." : {
       "extractionState" : "stale",
       "localizations" : {
@@ -978,6 +1198,28 @@
         }
       }
     },
+    "Destination folder" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Destination folder"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carpeta de destino"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dossier de destination"
+          }
+        }
+      }
+    },
     "Detached HEAD" : {
       "localizations" : {
         "en" : {
@@ -1040,6 +1282,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Saisissez un résumé du commit."
+          }
+        }
+      }
+    },
+    "Enter a repository URL." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter a repository URL."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Introduce una URL de repositorio."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saisissez une URL de dépôt."
           }
         }
       }
@@ -1150,6 +1414,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Filtrer les commits ou fichiers…"
+          }
+        }
+      }
+    },
+    "Folder name" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Folder name"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nombre de la carpeta"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nom du dossier"
           }
         }
       }
@@ -1712,6 +1998,28 @@
         }
       }
     },
+    "No repositories open" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No repositories open"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No hay repositorios abiertos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun dépôt ouvert"
+          }
+        }
+      }
+    },
     "No repository" : {
       "localizations" : {
         "en" : {
@@ -1822,6 +2130,28 @@
         }
       }
     },
+    "Open a local repository or clone one to get started." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open a local repository or clone one to get started."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre un repositorio local o clona uno para empezar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrez un dépôt local ou clonez-en un pour commencer."
+          }
+        }
+      }
+    },
     "Open a repository" : {
       "localizations" : {
         "en" : {
@@ -1862,6 +2192,51 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ouvrez un dépôt pour consulter et valider les modifications."
+          }
+        }
+      }
+    },
+    "Open one or more local repositories to get started." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open one or more local repositories to get started."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre uno o más repositorios locales para empezar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrez un ou plusieurs dépôts locaux pour commencer."
+          }
+        }
+      }
+    },
+    "Open repositories" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open repositories"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repositorios abiertos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dépôts ouverts"
           }
         }
       }
@@ -2020,6 +2395,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rebaser la branche actuelle"
+          }
+        }
+      }
+    },
+    "Reconnect the drive or restore the folder, then retry." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reconnect the drive or restore the folder, then retry."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vuelve a conectar la unidad o restaura la carpeta e inténtalo de nuevo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reconnectez le disque ou restaurez le dossier, puis réessayez."
           }
         }
       }
@@ -2220,6 +2617,50 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Historique du dépôt"
+          }
+        }
+      }
+    },
+    "Repository unavailable" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repository unavailable"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repositorio no disponible"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dépôt indisponible"
+          }
+        }
+      }
+    },
+    "Repository URL" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repository URL"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL del repositorio"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL du dépôt"
           }
         }
       }
@@ -2668,6 +3109,28 @@
         }
       }
     },
+    "The destination already exists. Choose a different folder name." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The destination already exists. Choose a different folder name."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El destino ya existe. Elige otro nombre de carpeta."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La destination existe déjà. Choisissez un autre nom de dossier."
+          }
+        }
+      }
+    },
     "The remote branch is preserved. Git will refuse to delete an unmerged branch." : {
       "localizations" : {
         "en" : {
@@ -2686,6 +3149,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "La branche distante est conservée. Git refusera de supprimer une branche non fusionnée."
+          }
+        }
+      }
+    },
+    "The uncommitted message draft will be discarded. Files and staged changes are preserved." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The uncommitted message draft will be discarded. Files and staged changes are preserved."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se descartará el borrador del mensaje de commit. Se conservarán los archivos y los cambios preparados."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le brouillon du message de commit sera supprimé. Les fichiers et les modifications indexées sont conservés."
           }
         }
       }
@@ -2976,226 +3461,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Votre travail, en toute clarté."
-          }
-        }
-      }
-    },
-    "Close repository" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Close repository"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cerrar repositorio"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fermer le dépôt"
-          }
-        }
-      }
-    },
-    "Close repository %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Close repository %@"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cerrar repositorio %@"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fermer le dépôt %@"
-          }
-        }
-      }
-    },
-    "Close repository?" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Close repository?"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¿Cerrar el repositorio?"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fermer le dépôt ?"
-          }
-        }
-      }
-    },
-    "Could not open repository" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Could not open repository"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No se pudo abrir el repositorio"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Impossible d’ouvrir le dépôt"
-          }
-        }
-      }
-    },
-    "No repositories open" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No repositories open"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No hay repositorios abiertos"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aucun dépôt ouvert"
-          }
-        }
-      }
-    },
-    "Open one or more local repositories to get started." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Open one or more local repositories to get started."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abre uno o más repositorios locales para empezar."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ouvrez un ou plusieurs dépôts locaux pour commencer."
-          }
-        }
-      }
-    },
-    "Open repositories" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Open repositories"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Repositorios abiertos"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dépôts ouverts"
-          }
-        }
-      }
-    },
-    "Reconnect the drive or restore the folder, then retry." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reconnect the drive or restore the folder, then retry."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vuelve a conectar la unidad o restaura la carpeta e inténtalo de nuevo."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reconnectez le disque ou restaurez le dossier, puis réessayez."
-          }
-        }
-      }
-    },
-    "Repository unavailable" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Repository unavailable"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Repositorio no disponible"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dépôt indisponible"
-          }
-        }
-      }
-    },
-    "The uncommitted message draft will be discarded. Files and staged changes are preserved." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The uncommitted message draft will be discarded. Files and staged changes are preserved."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Se descartará el borrador del mensaje de commit. Se conservarán los archivos y los cambios preparados."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Le brouillon du message de commit sera supprimé. Les fichiers et les modifications indexées sont conservés."
           }
         }
       }

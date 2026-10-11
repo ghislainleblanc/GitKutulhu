@@ -13,7 +13,7 @@ struct ContentView: View {
                 RepositoryWorkspaceView(session: session)
                     .id(session.id)
             } else {
-                ContentUnavailableView("No repositories open", systemImage: "folder", description: Text("Open one or more local repositories to get started."))
+                ContentUnavailableView("No repositories open", systemImage: "folder", description: Text("Open a local repository or clone one to get started."))
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }

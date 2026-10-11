@@ -94,6 +94,55 @@ struct RepositoryWorkspaceIntegration {
         await reopened.open([first, worktree])
         precondition(reopened.repositories.map(\.root) == [first, worktree])
 
+        // Clone through the same store as the UI, then verify disk state and restoration.
+        try "Cloned contents\n".write(to: first.appendingPathComponent("file.txt"), atomically: true, encoding: .utf8)
+        try git(["add", "file.txt"], at: first)
+        try git(["-c", "user.name=Test", "-c", "user.email=test@example.invalid", "commit", "-m", "Clone fixture"], at: first)
+        let remote = folder.appendingPathComponent("Remote dépôt.git", isDirectory: true)
+        try git(["clone", "--bare", first.path, remote.path], at: folder)
+        let destination = folder.appendingPathComponent("Cloned dépôt $(literal)", isDirectory: true)
+        let cloned = await reopened.clone("  " + remote.absoluteString + "\n", to: destination)
+        precondition(cloned && !reopened.isBusy && reopened.cloneError == nil)
+        precondition(reopened.repositories.count == 3 && reopened.selectedID == destination)
+        let snapshot = reopened.selectedRepository!.branches.repository!
+        precondition(snapshot.currentBranch == "main" && snapshot.remotes == ["origin"])
+        precondition(snapshot.branches.contains { $0.name == "main" && $0.remote == nil && $0.upstream == "origin/main" })
+        let contents = try String(contentsOf: destination.appendingPathComponent("file.txt"), encoding: .utf8)
+        precondition(contents == "Cloned contents\n")
+        let afterClone = RepositoryWorkspaceStore(defaults: defaults)
+        precondition(afterClone.selectedID == destination && afterClone.repositories.count == 3)
+        await afterClone.restore()
+        precondition(afterClone.selectedRepository?.branches.repository?.currentBranch == "main")
+
+        // Existing destinations (including empty folders and symlinks) are preserved.
+        for occupied in [destination, invalid, alias] {
+            let succeeded = await reopened.clone(remote.path, to: occupied)
+            precondition(!succeeded && reopened.cloneError != nil && !reopened.isBusy)
+            precondition(reopened.repositories.count == 3 && reopened.selectedID == destination)
+        }
+        let preserved = try String(contentsOf: destination.appendingPathComponent("file.txt"), encoding: .utf8)
+        precondition(preserved == contents)
+        let dangling = folder.appendingPathComponent("Dangling alias")
+        try FileManager.default.createSymbolicLink(at: dangling, withDestinationURL: folder.appendingPathComponent("missing"))
+        let reusedLink = await reopened.clone(remote.path, to: dangling)
+        precondition(!reusedLink && reopened.cloneError != nil)
+
+        // Bad sources fail without adding a tab, and a later retry succeeds.
+        let retryDestination = folder.appendingPathComponent("Retry clone", isDirectory: true)
+        for source in [" \n", folder.appendingPathComponent("Missing remote").path, "--upload-pack=invalid"] {
+            let succeeded = await reopened.clone(source, to: retryDestination)
+            precondition(!succeeded && reopened.cloneError != nil && !reopened.isBusy)
+            precondition(reopened.repositories.count == 3 && reopened.selectedID == destination)
+        }
+        let retried = await reopened.clone(remote.path, to: retryDestination)
+        precondition(retried && reopened.cloneError == nil && reopened.selectedID == retryDestination)
+
+        let emptyRemote = folder.appendingPathComponent("Empty.git", isDirectory: true)
+        try git(["init", "--bare", "--initial-branch=main", emptyRemote.path], at: folder)
+        let emptyDestination = folder.appendingPathComponent("Empty clone", isDirectory: true)
+        let emptyCloned = await reopened.clone(emptyRemote.path, to: emptyDestination)
+        precondition(emptyCloned && reopened.selectedRepository?.branches.repository?.branches.isEmpty == true)
+
         defaults.set(Data("invalid JSON".utf8), forKey: "repositoryWorkspace.v1")
         precondition(RepositoryWorkspaceStore(defaults: defaults).repositories.isEmpty)
         print("Repository workspace integration checks passed")
