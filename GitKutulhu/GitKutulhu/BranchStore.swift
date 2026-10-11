@@ -1,4 +1,4 @@
-import AppKit
+import Foundation
 import Observation
 
 @MainActor
@@ -20,18 +20,28 @@ final class BranchStore {
         return repository.currentBranch ?? String(localized: "Detached HEAD")
     }
 
-    func openRepository() {
+    init(repository: GitRepositorySnapshot? = nil) {
+        self.repository = repository
+        selectedRemote = repository?.remotes.contains("origin") == true ? "origin" : repository?.remotes.first ?? ""
+    }
+
+    func load(at root: URL) async {
         guard !isBusy else { return }
 
-        let panel = NSOpenPanel()
-        panel.canChooseDirectories = true
-        panel.canChooseFiles = false
-        panel.allowsMultipleSelection = false
-        panel.prompt = String(localized: "Open repository")
+        error = nil
+        isBusy = true
 
-        guard panel.runModal() == .OK, let folder = panel.url else { return }
+        defer { isBusy = false }
 
-        perform { try await self.service.snapshot(at: folder) }
+        do {
+            repository = try await service.snapshot(at: root)
+
+            if let remotes = repository?.remotes, !remotes.contains(selectedRemote) {
+                selectedRemote = remotes.contains("origin") ? "origin" : remotes.first ?? ""
+            }
+        } catch {
+            self.error = error.localizedDescription
+        }
     }
 
     func refresh() {

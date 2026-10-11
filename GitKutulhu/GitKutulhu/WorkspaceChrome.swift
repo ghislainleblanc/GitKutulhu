@@ -10,8 +10,6 @@ struct WorkspaceToolbar: View {
                 Image(systemName: "point.3.connected.trianglepath.dotted")
             }.font(.headline).foregroundStyle(Palette.accent)
 
-            Button(action: store.openRepository) { Label("Open repository", systemImage: "folder") }
-
             Text(verbatim: store.repository?.root.lastPathComponent ?? "").lineLimit(1)
 
             Label { Text(verbatim: store.branchLabel) } icon: { Image(systemName: "arrow.triangle.branch") }

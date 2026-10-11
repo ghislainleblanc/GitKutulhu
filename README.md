@@ -5,6 +5,24 @@ A lightweight, native SwiftUI Git client for macOS.
 Open `GitKutulhu/GitKutulhu.xcodeproj` in Xcode and run the GitKutulhu scheme.
 The project targets macOS 27 and Swift 6.
 
+## Open repositories
+
+Choose **Open repository** (⌘O) to open one or more local clones. Each repository
+has a tab; click a tab to switch, and hover over it to see its full path. Opening
+an already open repository, a subfolder, or a symbolic link selects the existing
+tab. Linked worktrees have their own tabs.
+
+The app automatically saves the open repository list and selected tab in local
+preferences and restores them at launch. Closing a tab removes it from the saved
+list without changing repository files. Unavailable repositories stay listed;
+reconnect their drive or restore their folder and choose **Retry**, or close their
+tab. Restoration only reads local Git state and never fetches automatically.
+
+Each repository keeps its own commit draft, selected remote, view, and filter
+while the app is running. Drafts are not saved across launches. Closing a tab
+with a draft asks before discarding it; working files and staged changes remain
+on disk.
+
 ## Branch management
 
 Choose **Open repository** and select an existing local clone of your GitHub
@@ -88,8 +106,9 @@ file metadata appear in Git's patch output; renames appear as deleted/added path
 
 Changes refreshes after app operations, on **Refresh**, and every three seconds
 while visible to pick up external edits. Commit drafts survive switching tabs
-and reset when opening a different repository. Git operations share the busy
-state with branch controls to prevent overlapping app mutations.
+and switching repositories. Each repository has a separate draft. Git operations
+share the busy state with branch controls to prevent overlapping app mutations
+in the same repository.
 
 Unresolved files are marked `U`. Resolve them in an external editor and stage
 each resolved file; commits and **Stage all** are disabled while conflicts remain.
@@ -153,4 +172,18 @@ swiftc -swift-version 6 -module-cache-path /tmp/GitKutulhu-module-cache \
   GitKutulhu/GitKutulhu/GitChanges.swift Tests/ChangesIntegration.swift \
   -o /tmp/GitKutulhu-changes-tests
 /tmp/GitKutulhu-changes-tests
+```
+
+Repository workspace checks cover opening multiple repositories, separate drafts,
+duplicate subfolders and symlinks, linked worktrees, missing-folder recovery,
+closing tabs, and restoration from saved preferences in a separate process:
+
+```sh
+swiftc -swift-version 6 -module-cache-path /tmp/GitKutulhu-workspace-test-cache \
+  GitKutulhu/GitKutulhu/GitBranchService.swift GitKutulhu/GitKutulhu/GitHistory.swift \
+  GitKutulhu/GitKutulhu/GitChanges.swift GitKutulhu/GitKutulhu/BranchStore.swift \
+  GitKutulhu/GitKutulhu/WorkspaceModels.swift \
+  GitKutulhu/GitKutulhu/RepositoryWorkspaceStore.swift \
+  Tests/RepositoryWorkspaceIntegration.swift -o /tmp/GitKutulhu-workspace-tests
+/tmp/GitKutulhu-workspace-tests
 ```
