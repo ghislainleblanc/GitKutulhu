@@ -13,5 +13,7 @@ struct GitKutulhuApp: App {
         WindowGroup {
             ContentView()
         }
+        .defaultSize(width: 1380, height: 860)
+        .windowStyle(.hiddenTitleBar)
     }
 }
