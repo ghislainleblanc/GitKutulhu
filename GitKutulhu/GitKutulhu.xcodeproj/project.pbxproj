@@ -6,10 +6,6 @@
 	objectVersion = 110;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		8529D7F2307BC65D00140426 /* SwiftFormat in Frameworks */ = {isa = PBXBuildFile; productRef = 8529D7F1307BC65D00140426 /* SwiftFormat */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		8529D7E2307BC62A00140426 /* GitKutulhu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitKutulhu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -26,7 +22,6 @@
 		8529D7DF307BC62A00140426 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
-				8529D7F2307BC65D00140426 /* SwiftFormat in Frameworks */,
 			);
 		};
 /* End PBXFrameworksBuildPhase section */
@@ -65,9 +60,6 @@
 				8529D7E4307BC62A00140426 /* GitKutulhu */,
 			);
 			name = GitKutulhu;
-			packageProductDependencies = (
-				8529D7F1307BC65D00140426 /* SwiftFormat */,
-			);
 			productName = GitKutulhu;
 			productReference = 8529D7E2307BC62A00140426 /* GitKutulhu.app */;
 			productType = "com.apple.product-type.application";
@@ -99,7 +91,6 @@
 			mainGroup = 8529D7D9307BC62A00140426;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				8529D7F0307BC65D00140426 /* XCRemoteSwiftPackageReference "SwiftFormat" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8529D7E3307BC62A00140426 /* Products */;
@@ -332,25 +323,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		8529D7F0307BC65D00140426 /* XCRemoteSwiftPackageReference "SwiftFormat" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/nicklockwood/SwiftFormat";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.63.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		8529D7F1307BC65D00140426 /* SwiftFormat */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8529D7F0307BC65D00140426 /* XCRemoteSwiftPackageReference "SwiftFormat" */;
-			productName = SwiftFormat;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8529D7DA307BC62A00140426 /* Project object */;
 	validationLevel = 1;
