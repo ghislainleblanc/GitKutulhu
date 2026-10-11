@@ -67,17 +67,40 @@ Graph connections are hidden while filtering to avoid implying adjacency between
 unrelated search results. History reloads after branch operations and **Refresh**.
 No repository content is modified by browsing history.
 
-## Remaining UI previews
+## Working changes and commits
 
-Staging, working-copy diffs, commit composition, conflict resolution, and AI
-controls still use in-memory samples. A persistent banner identifies these
-previews even while a real repository is connected. They never modify the
-connected repository. Pull, merge, and rebase actions are not exposed yet.
+Changes reads the connected repository's index and working tree, including
+untracked files and deletions. Ignored files are omitted. Files with both staged
+and unstaged edits appear in both groups. Search filters their full paths.
+Select an entry to view its actual staged or unstaged patch in split or unified
+layout. Split diffs preserve context and hunk line numbers. Binary changes and
+file metadata appear in Git's patch output; renames appear as deleted/added paths.
+
+- **Stage file** stages that file's current contents or deletion. **Stage all**
+  stages all non-ignored changes in the repository, including filtered-out files.
+- **Unstage file** removes the file from the index without changing its working
+  copy. This also works before the initial commit.
+- Enter a summary and choose **Commit staged changes** to create a local commit
+  containing only the index. Unstaged edits are preserved. Git's configured
+  identity, hooks, and signing settings apply; failures show Git's diagnostics
+  and retain the draft. Successful commits clear the draft and refresh state.
+  Choose **Push branch** separately to publish commits.
+
+Changes refreshes after app operations, on **Refresh**, and every three seconds
+while visible to pick up external edits. Commit drafts survive switching tabs
+and reset when opening a different repository. Git operations share the busy
+state with branch controls to prevent overlapping app mutations.
+
+Unresolved files are marked `U`. Resolve them in an external editor and stage
+each resolved file; commits and **Stage all** are disabled while conflicts remain.
+The Conflicts tab is still an explicitly labeled sample preview, including its
+AI controls. It never modifies the connected repository. Pull, merge, and rebase
+actions are not exposed yet. The Changes tab has no simulated AI controls.
 
 UI components are grouped by workflow in `HistoryView.swift`, `ChangesView.swift`,
-and `ConflictView.swift`. Real branch operations are in `GitBranchService.swift`
-and observed UI state is in `BranchStore.swift`. Format touched Swift files using
-the root `.swiftformat` configuration.
+and `ConflictView.swift`. Git operations are in `GitBranchService.swift`, observed
+repository state is in `BranchStore.swift`, and changes/diff state is in
+`GitChanges.swift`. Format touched Swift files using the root `.swiftformat`.
 
 ## Integration checks
 
@@ -91,6 +114,7 @@ working repository or push to GitHub.
 ```sh
 swiftc -swift-version 6 -module-cache-path /tmp/GitKutulhu-module-cache \
   GitKutulhu/GitKutulhu/GitBranchService.swift GitKutulhu/GitKutulhu/GitHistory.swift \
+  GitKutulhu/GitKutulhu/GitChanges.swift \
   Tests/BranchIntegration.swift \
   -o /tmp/GitKutulhu-branch-tests
 /tmp/GitKutulhu-branch-tests
@@ -113,6 +137,20 @@ references, graph continuity, pagination, and store reset/error states:
 ```sh
 swiftc -swift-version 6 -module-cache-path /tmp/GitKutulhu-module-cache \
   GitKutulhu/GitKutulhu/GitBranchService.swift GitKutulhu/GitKutulhu/GitHistory.swift \
+  GitKutulhu/GitKutulhu/GitChanges.swift \
   Tests/HistoryIntegration.swift -o /tmp/GitKutulhu-history-tests
 /tmp/GitKutulhu-history-tests
+```
+
+Changes integration checks cover initial commits, ignored files, literal
+Unicode/tab/newline/glob-like paths, staged and unstaged patches, split hunk
+alignment, partial staging, unstaging without changing working files, binary
+files, deletions, renames, hook failures, conflict status, and store reset/errors:
+
+```sh
+swiftc -swift-version 6 -module-cache-path /tmp/GitKutulhu-module-cache \
+  GitKutulhu/GitKutulhu/GitBranchService.swift GitKutulhu/GitKutulhu/GitHistory.swift \
+  GitKutulhu/GitKutulhu/GitChanges.swift Tests/ChangesIntegration.swift \
+  -o /tmp/GitKutulhu-changes-tests
+/tmp/GitKutulhu-changes-tests
 ```

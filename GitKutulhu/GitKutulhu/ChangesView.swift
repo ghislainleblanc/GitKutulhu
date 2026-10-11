@@ -1,202 +1,218 @@
 import SwiftUI
 
 struct ChangesView: View {
-    @Binding var workspace: DemoWorkspace
+    let branches: BranchStore
+    @Bindable var store: ChangesStore
     let search: String
     @State private var split = true
 
     var body: some View {
-        if workspace.committed {
-            ContentUnavailableView("Demo commit created", systemImage: "checkmark.circle", description: Text("Your staged changes have been committed in this preview."))
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-        } else {
-            HSplitView {
-                VStack(alignment: .leading, spacing: 0) {
-                    HStack {
-                        Text("Working changes").font(.headline)
-
-                        Spacer()
-
-                        Button("Stage all") { workspace.staged = Set(DemoFile.samples.map(\.id)) }
-                            .buttonStyle(.borderless).font(.caption)
-                    }.padding(16)
-
-                    Divider()
-
-                    ScrollView {
-                        VStack(spacing: 4) {
-                            ForEach(DemoFile.samples.filter { search.isEmpty || $0.id.localizedCaseInsensitiveContains(search) }) { file in
-                                FileChangeRow(file: file, selected: workspace.selectedFile == file.id, staged: workspace.staged.contains(file.id), select: { workspace.selectedFile = file.id }, toggle: {
-                                    if !workspace.staged.insert(file.id).inserted {
-                                        workspace.staged.remove(file.id)
-                                    }
-                                })
-                            }
-                        }.padding(8)
-                    }
-
-                    Divider()
-
-                    CommitComposer(workspace: $workspace)
-                }
-                .frame(minWidth: 260, idealWidth: 285, maxWidth: 340)
-                .background(Palette.panel)
-
-                if let file = DemoFile.samples.first(where: { $0.id == workspace.selectedFile }) {
-                    VStack(spacing: 0) {
+        Group {
+            if branches.repository == nil {
+                ContentUnavailableView("No repository", systemImage: "folder", description: Text("Open a repository to view and commit changes."))
+            } else {
+                HSplitView {
+                    VStack(alignment: .leading, spacing: 0) {
                         HStack {
-                            Image(systemName: "doc.text").foregroundStyle(Palette.muted)
-
-                            Text(verbatim: file.id).font(.callout.weight(.medium))
-
-                            ChangeCount(additions: file.additions, deletions: file.deletions)
-
+                            Text("Working changes").font(.headline)
                             Spacer()
-
-                            Picker("Diff layout", selection: $split) {
-                                Text("Split").tag(true)
-
-                                Text("Unified").tag(false)
-                            }.pickerStyle(.segmented).labelsHidden().frame(width: 130)
+                            Button("Stage all") { branches.stage(nil) }
+                                .buttonStyle(.borderless).font(.caption)
+                                .disabled(branches.isBusy || store.isLoading || store.error != nil || store.hasConflicts || !store.files.contains(where: { !$0.staged }))
                         }.padding(16)
-
                         Divider()
-
-                        DiffViewer(file: file, split: split)
-                    }.frame(minWidth: 400)
+                        if let error = store.error {
+                            Text(verbatim: error).foregroundStyle(.red).textSelection(.enabled).padding()
+                        }
+                        if store.hasConflicts {
+                            Text("Resolve conflicts in your editor, then stage the resolved files. The Conflicts tab is a preview.")
+                                .font(.caption).foregroundStyle(.orange).padding()
+                        }
+                        if store.files.isEmpty, !store.isLoading, store.error == nil {
+                            ContentUnavailableView("Working tree clean", systemImage: "checkmark.circle", description: Text("No changes to stage or commit."))
+                        }
+                        ScrollView {
+                            LazyVStack(alignment: .leading, spacing: 4) {
+                                ForEach([false, true], id: \.self) { staged in
+                                    Text(staged ? "Staged changes" : "Unstaged changes")
+                                        .font(.caption.weight(.semibold)).foregroundStyle(Palette.muted).padding(8)
+                                    ForEach(store.files.filter { $0.staged == staged && (search.isEmpty || $0.path.localizedCaseInsensitiveContains(search)) }) { file in
+                                        FileChangeRow(file: file, selected: store.selectedID == file.id, disabled: branches.isBusy || store.isLoading || store.error != nil, select: { store.selectedID = file.id }, toggle: {
+                                            if file.staged {
+                                                branches.unstage(file)
+                                            } else {
+                                                branches.stage(file)
+                                            }
+                                        })
+                                    }
+                                }
+                            }.padding(8)
+                        }
+                        Divider()
+                        CommitComposer(store: store, branches: branches)
+                    }
+                    .frame(minWidth: 260, idealWidth: 300, maxWidth: 360)
+                    .background(Palette.panel)
+                    VStack(spacing: 0) {
+                        if let file = store.selectedFile {
+                            HStack {
+                                Image(systemName: "doc.text").foregroundStyle(Palette.muted)
+                                VStack(alignment: .leading) {
+                                    Text(verbatim: file.path).font(.callout.weight(.medium))
+                                    Text(file.staged ? "Staged changes" : "Unstaged changes").font(.caption).foregroundStyle(Palette.muted)
+                                }
+                                Spacer()
+                                if store.isLoadingDiff {
+                                    ProgressView().controlSize(.small)
+                                }
+                                Picker("Diff layout", selection: $split) {
+                                    Text("Split").tag(true)
+                                    Text("Unified").tag(false)
+                                }.pickerStyle(.segmented).labelsHidden().frame(width: 130)
+                            }.padding(16)
+                            Divider()
+                            if let error = store.diffError {
+                                Text(verbatim: error).foregroundStyle(.red).textSelection(.enabled).padding()
+                            } else if store.patch.isEmpty {
+                                ContentUnavailableView("No text diff", systemImage: "doc", description: Text("This change has no text patch to display."))
+                            } else {
+                                DiffViewer(patch: store.patch, split: split)
+                            }
+                        } else {
+                            ContentUnavailableView("Select a changed file", systemImage: "doc.text.magnifyingglass")
+                        }
+                    }.frame(minWidth: 400, maxHeight: .infinity)
                 }
             }
         }
+        .disabled(branches.repository?.root != store.repositoryRoot)
+        .task(id: branches.revision) {
+            repeat {
+                if !branches.isBusy {
+                    await store.reload(at: branches.repository?.root)
+                }
+                do { try await Task.sleep(for: .seconds(3)) } catch { return }
+            } while !Task.isCancelled
+        }
+        .task(id: store.selectedID) { await store.loadDiff() }
     }
 }
 
 struct FileChangeRow: View {
-    let file: DemoFile
+    let file: GitWorkingFile
     let selected: Bool
-    let staged: Bool
+    let disabled: Bool
     let select: () -> Void
     let toggle: () -> Void
 
     var body: some View {
         HStack(spacing: 10) {
-            Button(action: toggle) { Image(systemName: staged ? "checkmark.square.fill" : "square").foregroundStyle(staged ? Palette.accent : Palette.muted) }
-                .buttonStyle(.plain).help(staged ? "Unstage file" : "Stage file").accessibilityLabel(staged ? "Unstage file" : "Stage file")
-
+            Button(action: toggle) { Image(systemName: file.staged ? "checkmark.square.fill" : "square").foregroundStyle(file.staged ? Palette.accent : Palette.muted) }
+                .buttonStyle(.plain).disabled(disabled)
+                .help(file.staged ? "Unstage file" : "Stage file").accessibilityLabel(file.staged ? "Unstage file" : "Stage file")
             Button(action: select) {
-                VStack(alignment: .leading, spacing: 5) {
-                    Text(verbatim: file.id).font(.callout)
-
-                    Text(verbatim: file.folder).font(.caption2).foregroundStyle(Palette.muted)
-                }.frame(maxWidth: .infinity, alignment: .leading).contentShape(Rectangle())
+                Text(verbatim: file.path).font(.callout).frame(maxWidth: .infinity, alignment: .leading).contentShape(Rectangle())
             }.buttonStyle(.plain)
-
-            Text(verbatim: file.deletions == 0 ? "A" : "M").font(.caption2.bold()).foregroundStyle(Palette.accent)
+            Text(verbatim: file.status).font(.caption2.bold()).foregroundStyle(file.conflicted ? .orange : Palette.accent)
         }
         .padding(10).background(selected ? Palette.accent.opacity(0.09) : .clear, in: RoundedRectangle(cornerRadius: 6))
     }
 }
 
 struct CommitComposer: View {
-    @Binding var workspace: DemoWorkspace
+    @Bindable var store: ChangesStore
+    let branches: BranchStore
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack {
                 Text("Commit").font(.headline)
-
                 Spacer()
-
-                Text(workspace.staged.count, format: .number).foregroundStyle(Palette.accent)
-
+                Text(store.stagedCount, format: .number).foregroundStyle(Palette.accent)
                 Text("staged").foregroundStyle(Palette.muted)
             }.font(.caption)
-
-            TextField("Commit summary…", text: $workspace.message, axis: .vertical)
+            TextField("Commit summary…", text: $store.message, axis: .vertical)
                 .textFieldStyle(.plain).lineLimit(3 ... 5).padding(10)
                 .background(Palette.background, in: RoundedRectangle(cornerRadius: 6))
-
+                .disabled(branches.isBusy)
             Button {
-                workspace.message = String(localized: "Add commit graph and refine branch navigation")
+                let message = store.message
+                Task {
+                    if await branches.commit(message) {
+                        store.message = ""
+                        await store.reload(at: branches.repository?.root)
+                    }
+                }
             } label: {
-                Label("Generate message · Demo AI", systemImage: "sparkles")
-            }.buttonStyle(.borderless).font(.caption).disabled(workspace.staged.isEmpty)
-
-            Button { workspace.committed = true } label: {
                 Label("Commit staged changes", systemImage: "checkmark").frame(maxWidth: .infinity).padding(.vertical, 5)
             }.buttonStyle(.borderedProminent)
-                .disabled(workspace.staged.isEmpty || workspace.message.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
-
-            Text("Preview only. No repository is modified.").font(.caption2).foregroundStyle(Palette.muted)
+                .disabled(branches.isBusy || store.isLoading || store.error != nil || store.hasConflicts || store.stagedCount == 0 || store.message.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+            Text("Commits include staged changes only and remain local until pushed.").font(.caption2).foregroundStyle(Palette.muted)
         }.padding(16)
     }
 }
 
 struct DiffViewer: View {
-    let file: DemoFile
+    let patch: String
     let split: Bool
 
     var body: some View {
         ScrollView([.horizontal, .vertical]) {
-            VStack(alignment: .leading, spacing: 0) {
+            LazyVStack(alignment: .leading, spacing: 0) {
                 HStack {
                     Text(split ? "Before" : "Unified diff")
-
                     if split {
                         Spacer()
-
                         Text("After")
-
                         Spacer()
                     }
                 }.font(.caption).foregroundStyle(Palette.muted).padding(12)
-
-                Text(verbatim: "@@ -1,\(file.old.count) +1,\(file.new.count) @@")
-                    .font(.system(.caption, design: .monospaced)).foregroundStyle(Palette.purple)
-                    .padding(12).frame(maxWidth: .infinity, alignment: .leading).background(Palette.purple.opacity(0.08))
-
                 if split {
+                    let rows = GitDiffRow.split(patch)
                     HStack(alignment: .top, spacing: 0) {
-                        CodeLines(lines: file.old, kind: .removed).frame(minWidth: 340, maxWidth: .infinity)
-
+                        DiffColumn(rows: rows, before: true)
                         Divider()
-
-                        CodeLines(lines: file.new, kind: .added).frame(minWidth: 340, maxWidth: .infinity)
+                        DiffColumn(rows: rows, before: false)
                     }
                 } else {
-                    CodeLines(lines: file.old, kind: .removed)
-
-                    CodeLines(lines: file.new, kind: .added)
+                    ForEach(Array(patch.components(separatedBy: "\n").enumerated()), id: \.offset) { _, line in
+                        DiffCell(text: line, number: nil, color: line.hasPrefix("+") ? Palette.accent : line.hasPrefix("-") ? .red : .clear)
+                    }
                 }
-            }
+            }.textSelection(.enabled)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .background(Palette.background)
     }
 }
 
-private struct CodeLines: View {
-    let lines: [String]
-    let kind: Kind
+private struct DiffColumn: View {
+    let rows: [GitDiffRow]
+    let before: Bool
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            ForEach(Array(lines.enumerated()), id: \.offset) { index, line in
-                HStack(spacing: 12) {
-                    Text((index + 1).formatted()).foregroundStyle(Palette.muted).frame(width: 28, alignment: .trailing)
-
-                    Text(verbatim: kind == .added ? "+" : "−").foregroundStyle(kind == .added ? Palette.accent : .red)
-
-                    Text(verbatim: line).foregroundStyle(Palette.text).fixedSize(horizontal: true, vertical: false)
-
-                    Spacer(minLength: 12)
-                }
-                .font(.system(size: 12, design: .monospaced)).frame(height: 26).padding(.horizontal, 8)
-                .background((kind == .added ? Palette.accent : Color.red).opacity(0.065))
+        LazyVStack(alignment: .leading, spacing: 0) {
+            ForEach(Array(rows.enumerated()), id: \.offset) { _, row in
+                DiffCell(text: before ? row.before : row.after,
+                         number: before ? row.oldLine : row.newLine,
+                         color: row.changed ? (before ? .red : Palette.accent) : .clear)
             }
-        }.textSelection(.enabled)
+        }.frame(minWidth: 340, maxWidth: .infinity)
     }
 }
 
-private extension CodeLines {
-    enum Kind { case added, removed }
+private struct DiffCell: View {
+    let text: String?
+    let number: Int?
+    let color: Color
+
+    var body: some View {
+        HStack(spacing: 12) {
+            Text(verbatim: number?.formatted() ?? "").foregroundStyle(Palette.muted).frame(width: 45, alignment: .trailing)
+            Text(verbatim: text ?? "").fixedSize(horizontal: true, vertical: false)
+            Spacer(minLength: 12)
+        }
+        .font(.system(size: 12, design: .monospaced)).frame(minWidth: 340, maxWidth: .infinity, alignment: .leading).frame(height: 26).padding(.horizontal, 8)
+        .background(text == nil ? .clear : color.opacity(0.08))
+    }
 }

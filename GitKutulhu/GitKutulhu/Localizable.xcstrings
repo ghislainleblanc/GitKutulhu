@@ -91,6 +91,7 @@
       }
     },
     "Add commit graph and refine branch navigation" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -401,6 +402,7 @@
       }
     },
     "Changes and conflicts are sample previews. History and branch operations use the connected repository." : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -620,6 +622,28 @@
         }
       }
     },
+    "Commits include staged changes only and remain local until pushed." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commits include staged changes only and remain local until pushed."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los commits incluyen solo los cambios preparados y permanecen locales hasta enviarlos."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les commits incluent uniquement les modifications indexées et restent locaux avant leur envoi."
+          }
+        }
+      }
+    },
     "Commits will appear here after the repository has history." : {
       "localizations" : {
         "en" : {
@@ -660,6 +684,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Comparaison avec le premier parent"
+          }
+        }
+      }
+    },
+    "Conflict resolution is a sample preview. No repository is modified here." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conflict resolution is a sample preview. No repository is modified here."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La resolución de conflictos es una demostración. Aquí no se modifica ningún repositorio."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La résolution des conflits est une démonstration. Aucun dépôt n’est modifié ici."
           }
         }
       }
@@ -865,6 +911,7 @@
       }
     },
     "Demo commit created" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -971,6 +1018,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Disposition des différences"
+          }
+        }
+      }
+    },
+    "Enter a commit summary." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter a commit summary."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Introduce un resumen del commit."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saisissez un résumé du commit."
           }
         }
       }
@@ -1086,6 +1155,7 @@
       }
     },
     "Generate message · Demo AI" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1576,6 +1646,28 @@
         }
       }
     },
+    "No changes to stage or commit." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No changes to stage or commit."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No hay cambios para preparar o confirmar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucune modification à indexer ou à valider."
+          }
+        }
+      }
+    },
     "No commits yet" : {
       "localizations" : {
         "en" : {
@@ -1638,6 +1730,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aucun dépôt"
+          }
+        }
+      }
+    },
+    "No text diff" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No text diff"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sin diferencias de texto"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun diff textuel"
           }
         }
       }
@@ -1730,6 +1844,28 @@
         }
       }
     },
+    "Open a repository to view and commit changes." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open a repository to view and commit changes."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre un repositorio para ver y confirmar los cambios."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrez un dépôt pour consulter et valider les modifications."
+          }
+        }
+      }
+    },
     "Open repository" : {
       "localizations" : {
         "en" : {
@@ -1753,6 +1889,7 @@
       }
     },
     "Preview only. No repository is modified." : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2087,6 +2224,28 @@
         }
       }
     },
+    "Resolve conflicts in your editor, then stage the resolved files. The Conflicts tab is a preview." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resolve conflicts in your editor, then stage the resolved files. The Conflicts tab is a preview."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resuelve los conflictos en tu editor y prepara los archivos resueltos. La pestaña Conflictos es una demostración."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Résolvez les conflits dans votre éditeur, puis indexez les fichiers résolus. L’onglet Conflits est une démonstration."
+          }
+        }
+      }
+    },
     "Resolve merge conflict" : {
       "localizations" : {
         "en" : {
@@ -2309,6 +2468,28 @@
         }
       }
     },
+    "Select a changed file" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select a changed file"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selecciona un archivo modificado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sélectionnez un fichier modifié"
+          }
+        }
+      }
+    },
     "Set up app theme and typography" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -2420,6 +2601,28 @@
         }
       }
     },
+    "Staged changes" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Staged changes"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cambios preparados"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifications indexées"
+          }
+        }
+      }
+    },
     "Suggest resolution · Demo AI" : {
       "localizations" : {
         "en" : {
@@ -2483,6 +2686,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "La branche distante est conservée. Git refusera de supprimer une branche non fusionnée."
+          }
+        }
+      }
+    },
+    "This change has no text patch to display." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This change has no text patch to display."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este cambio no tiene diferencias de texto que mostrar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cette modification ne contient aucun diff textuel à afficher."
           }
         }
       }
@@ -2576,6 +2801,28 @@
         }
       }
     },
+    "Unstaged changes" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unstaged changes"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cambios sin preparar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifications non indexées"
+          }
+        }
+      }
+    },
     "Working changes" : {
       "localizations" : {
         "en" : {
@@ -2594,6 +2841,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Modifications locales"
+          }
+        }
+      }
+    },
+    "Working tree clean" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Working tree clean"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Árbol de trabajo limpio"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Répertoire de travail propre"
           }
         }
       }
@@ -2666,6 +2935,7 @@
       }
     },
     "Your staged changes have been committed in this preview." : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

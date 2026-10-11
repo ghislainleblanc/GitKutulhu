@@ -3,6 +3,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var branches = BranchStore()
     @State private var workspace = DemoWorkspace()
+    @State private var changes = ChangesStore()
     @State private var section: WorkspaceSection = .history
     @State private var search = ""
     @State private var showsBranchSheet = false
@@ -25,16 +26,17 @@ struct ContentView: View {
 
                     Divider()
 
-                    Text("Changes and conflicts are sample previews. History and branch operations use the connected repository.")
-                        .font(.caption).foregroundStyle(Palette.muted).padding(10)
-
                     switch section {
                     case .history:
                         HistoryView(repository: branches.repository, revision: branches.revision, search: search)
                     case .changes:
-                        ChangesView(workspace: $workspace, search: search)
+                        ChangesView(branches: branches, store: changes, search: search)
                     case .conflicts:
-                        ConflictView(workspace: $workspace)
+                        VStack(spacing: 0) {
+                            Text("Conflict resolution is a sample preview. No repository is modified here.")
+                                .font(.caption).foregroundStyle(Palette.muted).padding(10)
+                            ConflictView(workspace: $workspace)
+                        }
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
