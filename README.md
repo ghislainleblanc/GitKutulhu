@@ -53,9 +53,23 @@ and SSH credentials. Hardened Runtime remains enabled. This build is intended
 for direct macOS distribution; a Mac App Store sandbox design would require a
 different credential and repository access strategy.
 
+## Repository history
+
+History reads commits reachable from local branches, remote tracking branches,
+tags, and HEAD. The graph follows actual parent links, including merges. Select
+any commit to see its full message, author, date, revision, and changed files with
+line counts or a binary indicator. Merge summaries compare against the first
+parent. Renames appear as an added and deleted path.
+
+History loads 200 commits at a time; choose **Load older commits** to continue.
+Search filters loaded commits by message, author, email, revision, and reference.
+Graph connections are hidden while filtering to avoid implying adjacency between
+unrelated search results. History reloads after branch operations and **Refresh**.
+No repository content is modified by browsing history.
+
 ## Remaining UI previews
 
-Commit history, staging, diffs, commit composition, conflict resolution, and AI
+Staging, working-copy diffs, commit composition, conflict resolution, and AI
 controls still use in-memory samples. A persistent banner identifies these
 previews even while a real repository is connected. They never modify the
 connected repository. Pull, merge, and rebase actions are not exposed yet.
@@ -76,7 +90,8 @@ working repository or push to GitHub.
 
 ```sh
 swiftc -swift-version 6 -module-cache-path /tmp/GitKutulhu-module-cache \
-  GitKutulhu/GitKutulhu/GitBranchService.swift Tests/BranchIntegration.swift \
+  GitKutulhu/GitKutulhu/GitBranchService.swift GitKutulhu/GitKutulhu/GitHistory.swift \
+  Tests/BranchIntegration.swift \
   -o /tmp/GitKutulhu-branch-tests
 /tmp/GitKutulhu-branch-tests
 ```
@@ -90,3 +105,14 @@ GITKUTULHU_TEST_GITHUB=1 /tmp/GitKutulhu-branch-tests
 
 Authenticated GitHub push and interactive UI behavior should also be checked
 with your own clone and credentials before release.
+
+History integration checks cover empty repositories, full messages, merge and
+root summaries, binary files, Unicode/tab/newline paths, detached HEAD, remote
+references, graph continuity, pagination, and store reset/error states:
+
+```sh
+swiftc -swift-version 6 -module-cache-path /tmp/GitKutulhu-module-cache \
+  GitKutulhu/GitKutulhu/GitBranchService.swift GitKutulhu/GitKutulhu/GitHistory.swift \
+  Tests/HistoryIntegration.swift -o /tmp/GitKutulhu-history-tests
+/tmp/GitKutulhu-history-tests
+```

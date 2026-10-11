@@ -1,2404 +1,2715 @@
 {
-  "sourceLanguage": "en",
-  "strings": {
-    "Demo workspace": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Demo workspace"
+  "sourceLanguage" : "en",
+  "strings" : {
+    "+%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%@"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Espace de démonstration"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%@"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Espacio de demostración"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%@"
           }
         }
       }
     },
-    "OK": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "OK"
+    "−%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "−%@"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "OK"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "−%@"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aceptar"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "−%@"
           }
         }
       }
     },
-    "This is a UI preview. Connect a repository to enable Git operations.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "This is a UI preview. Connect a repository to enable Git operations."
+    "Accept" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accept"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ceci est un aperçu de l’interface. Connectez un dépôt pour activer les opérations Git."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aceptar"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Esta es una vista previa de la interfaz. Conecta un repositorio para activar las operaciones Git."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accepter"
           }
         }
       }
     },
-    "History": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "History"
+    "Add commit graph and branch lanes" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add commit graph and branch lanes"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Historique"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Añadir el gráfico de commits y los carriles de ramas"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Historial"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajouter le graphe des commits et les couloirs de branches"
           }
         }
       }
     },
-    "Changes": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Changes"
+    "Add commit graph and refine branch navigation" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add commit graph and refine branch navigation"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Modifications"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Añadir el gráfico de commits y mejorar la navegación de ramas"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cambios"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajouter le graphe des commits et améliorer la navigation des branches"
           }
         }
       }
     },
-    "Conflicts": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Conflicts"
+    "Add syntax highlighting to diffs" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add syntax highlighting to diffs"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Conflits"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Añadir resaltado de sintaxis a las diferencias"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Conflictos"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajouter la coloration syntaxique aux différences"
           }
         }
       }
     },
-    "Fetch": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Fetch"
+    "After" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "After"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Récupérer"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Después"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Obtener"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Après"
           }
         }
       }
     },
-    "Fetch remote changes": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Fetch remote changes"
+    "All branches" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All branches"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Récupérer les modifications distantes"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Todas las ramas"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Obtener cambios remotos"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toutes les branches"
           }
         }
       }
     },
-    "Pull": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pull"
+    "AUTHOR" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AUTHOR"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tirer"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AUTOR"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Traer"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AUTEUR"
           }
         }
       }
     },
-    "Push": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Push"
+    "Before" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Before"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pousser"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Antes"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Enviar"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avant"
           }
         }
       }
     },
-    "Branch": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Branch"
+    "Binary" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Binary"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Branche"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Binario"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Rama"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Binaire"
           }
         }
       }
     },
-    "Merge into current branch": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Merge into current branch"
+    "Branch" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Branch"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Fusionner dans la branche actuelle"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rama"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Fusionar en la rama actual"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Branche"
           }
         }
       }
     },
-    "Rebase current branch": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Rebase current branch"
+    "Branch management" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Branch management"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Rebaser la branche actuelle"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gestión de ramas"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Rebasar la rama actual"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gestion des branches"
           }
         }
       }
     },
-    "Integrate": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Integrate"
+    "Branch name" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Branch name"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Intégrer"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nombre de la rama"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Integrar"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nom de la branche"
           }
         }
       }
     },
-    "WORKSPACE": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "WORKSPACE"
+    "Build repository workspace layout" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Build repository workspace layout"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ESPACE DE TRAVAIL"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crear el diseño del espacio del repositorio"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ESPACIO DE TRABAJO"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Créer la disposition de l’espace du dépôt"
           }
         }
       }
     },
-    "Local repository · Demo": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Local repository · Demo"
+    "Cancel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dépôt local · Démonstration"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Repositorio local · Demostración"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuler"
           }
         }
       }
     },
-    "Commit history": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Commit history"
+    "CHANGED FILES" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CHANGED FILES"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Historique des commits"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ARCHIVOS MODIFICADOS"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Historial de commits"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "FICHIERS MODIFIÉS"
           }
         }
       }
     },
-    "Working changes": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Working changes"
+    "Changes" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Changes"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Modifications locales"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cambios"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cambios locales"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifications"
           }
         }
       }
     },
-    "Merge conflicts": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Merge conflicts"
+    "Changes and conflicts are sample previews. History and branch operations use the connected repository." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Changes and conflicts are sample previews. History and branch operations use the connected repository."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Conflits de fusion"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los cambios y conflictos son vistas de demostración. El historial y las operaciones de ramas usan el repositorio conectado."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Conflictos de fusión"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les modifications et les conflits sont des aperçus de démonstration. L’historique et les opérations sur les branches utilisent le dépôt connecté."
           }
         }
       }
     },
-    "LOCAL BRANCHES": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "LOCAL BRANCHES"
+    "Check out branch" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check out branch"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "BRANCHES LOCALES"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cambiar a la rama"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "RAMAS LOCALES"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Basculer sur la branche"
           }
         }
       }
     },
-    "Create branch": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Create branch"
+    "Choose a configured remote." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose a configured remote."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Créer une branche"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elige un repositorio remoto configurado."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Crear rama"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisissez un dépôt distant configuré."
           }
         }
       }
     },
-    "REMOTES": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "REMOTES"
+    "Choose a repository to browse its commit history." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose a repository to browse its commit history."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DÉPÔTS DISTANTS"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elige un repositorio para explorar su historial de commits."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "REMOTOS"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisissez un dépôt pour parcourir son historique de commits."
           }
         }
       }
     },
-    "Your workflow, in focus.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Your workflow, in focus."
+    "Commit" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commit"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Votre travail, en toute clarté."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commit"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tu trabajo, con claridad."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commit"
           }
         }
       }
     },
-    "Review changes. Resolve conflicts. Keep moving.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Review changes. Resolve conflicts. Keep moving."
+    "COMMIT" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "COMMIT"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Révisez les modifications. Résolvez les conflits. Avancez."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "COMMIT"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Revisa los cambios. Resuelve los conflictos. Sigue adelante."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "COMMIT"
           }
         }
       }
     },
-    "Workspace view": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Workspace view"
+    "COMMIT DETAILS" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "COMMIT DETAILS"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vue de l’espace de travail"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DETALLES DEL COMMIT"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vista del espacio de trabajo"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DÉTAILS DU COMMIT"
           }
         }
       }
     },
-    "Filter commits or files…": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Filter commits or files…"
+    "Commit history" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commit history"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Filtrer les commits ou fichiers…"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historial de commits"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Filtrar commits o archivos…"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historique des commits"
           }
         }
       }
     },
-    "Add commit graph and branch lanes": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Add commit graph and branch lanes"
+    "Commit staged changes" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commit staged changes"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ajouter le graphe des commits et les couloirs de branches"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confirmar cambios preparados"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Añadir el gráfico de commits y los carriles de ramas"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valider les modifications indexées"
           }
         }
       }
     },
-    "Refine sidebar spacing and selection": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Refine sidebar spacing and selection"
+    "Commit summary…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commit summary…"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Améliorer l’espacement et la sélection de la barre latérale"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resumen del commit…"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mejorar el espaciado y la selección de la barra lateral"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Résumé du commit…"
           }
         }
       }
     },
-    "Build repository workspace layout": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Build repository workspace layout"
+    "Commits will appear here after the repository has history." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commits will appear here after the repository has history."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Créer la disposition de l’espace du dépôt"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los commits aparecerán aquí cuando el repositorio tenga historial."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Crear el diseño del espacio del repositorio"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les commits apparaîtront ici lorsque le dépôt aura un historique."
           }
         }
       }
     },
-    "Merge branch feature/diff-viewer": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Merge branch feature/diff-viewer"
+    "Compared with the first parent" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compared with the first parent"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Fusionner la branche feature/diff-viewer"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comparado con el primer padre"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Fusionar la rama feature/diff-viewer"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comparaison avec le premier parent"
           }
         }
       }
     },
-    "Add syntax highlighting to diffs": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Add syntax highlighting to diffs"
+    "Conflict resolved" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conflict resolved"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ajouter la coloration syntaxique aux différences"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conflicto resuelto"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Añadir resaltado de sintaxis a las diferencias"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conflit résolu"
           }
         }
       }
     },
-    "Support side-by-side file comparison": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Support side-by-side file comparison"
+    "Conflicts" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conflicts"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Permettre la comparaison des fichiers côte à côte"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conflictos"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Permitir la comparación de archivos en paralelo"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conflits"
           }
         }
       }
     },
-    "Set up app theme and typography": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Set up app theme and typography"
+    "Create and check out a branch in the demo workspace." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create and check out a branch in the demo workspace."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Configurer le thème et la typographie de l’application"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crea y activa una rama en el espacio de demostración."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Configurar el tema y la tipografía de la aplicación"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Créez et activez une branche dans l’espace de démonstration."
           }
         }
       }
     },
-    "Create the initial workspace": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Create the initial workspace"
+    "Create and check out a local branch from the current HEAD. Push to publish it on GitHub." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create and check out a local branch from the current HEAD. Push to publish it on GitHub."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Créer l’espace de travail initial"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crea una rama local desde el HEAD actual y cambia a ella. Súbela para publicarla en GitHub."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Crear el espacio de trabajo inicial"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Créez une branche locale depuis HEAD et basculez dessus. Poussez-la pour la publier sur GitHub."
           }
         }
       }
     },
-    "Repository history": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Repository history"
+    "Create branch" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create branch"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Historique du dépôt"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crear rama"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Historial del repositorio"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Créer une branche"
           }
         }
       }
     },
-    "All branches": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "All branches"
+    "Create the initial workspace" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create the initial workspace"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Toutes les branches"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crear el espacio de trabajo inicial"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Todas las ramas"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Créer l’espace de travail initial"
           }
         }
       }
     },
-    "GRAPH": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "GRAPH"
+    "Current branch" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Current branch"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "GRAPHE"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rama actual"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "GRÁFICO"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Branche actuelle"
           }
         }
       }
     },
-    "COMMIT": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "COMMIT"
+    "Delete local branch" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete local branch"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "COMMIT"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eliminar rama local"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "COMMIT"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer la branche locale"
           }
         }
       }
     },
-    "AUTHOR": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "AUTHOR"
+    "Delete local branch?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete local branch?"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "AUTEUR"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Eliminar la rama local?"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "AUTOR"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer la branche locale ?"
           }
         }
       }
     },
-    "REVISION": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "REVISION"
+    "Demo commit created" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demo commit created"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "RÉVISION"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commit de demostración creado"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "REVISIÓN"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commit de démonstration créé"
           }
         }
       }
     },
-    "You": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "You"
+    "Demo merge · develop → feature/graph-view" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demo merge · develop → feature/graph-view"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vous"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fusión de demostración · develop → feature/graph-view"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tú"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fusion de démonstration · develop → feature/graph-view"
           }
         }
       }
     },
-    "COMMIT DETAILS": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "COMMIT DETAILS"
+    "Demo workspace" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demo workspace"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DÉTAILS DU COMMIT"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espacio de demostración"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DETALLES DEL COMMIT"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Espace de démonstration"
           }
         }
       }
     },
-    "Sample commit from the demo repository.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sample commit from the demo repository."
+    "Detached HEAD" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detached HEAD"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Exemple de commit du dépôt de démonstration."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HEAD separado"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Commit de ejemplo del repositorio de demostración."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HEAD détachée"
           }
         }
       }
     },
-    "CHANGED FILES": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "CHANGED FILES"
+    "Diff layout" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diff layout"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "FICHIERS MODIFIÉS"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diseño de diferencias"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ARCHIVOS MODIFICADOS"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disposition des différences"
           }
         }
       }
     },
-    "Illustrative file summary": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Illustrative file summary"
+    "Enter a valid Git branch name." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter a valid Git branch name."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Résumé illustratif des fichiers"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Introduce un nombre de rama Git válido."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Resumen ilustrativo de archivos"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saisissez un nom de branche Git valide."
           }
         }
       }
     },
-    "+%@": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "+%@"
+    "Fetch" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fetch"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "+%@"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obtener"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "+%@"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Récupérer"
           }
         }
       }
     },
-    "−%@": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "−%@"
+    "Fetch remote changes" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fetch remote changes"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "−%@"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obtener cambios remotos"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "−%@"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Récupérer les modifications distantes"
           }
         }
       }
     },
-    "Demo commit created": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Demo commit created"
+    "Fetch to update remote branches." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fetch to update remote branches."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Commit de démonstration créé"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obtén los cambios para actualizar las ramas remotas."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Commit de demostración creado"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Récupérez les données pour actualiser les branches distantes."
           }
         }
       }
     },
-    "Your staged changes have been committed in this preview.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Your staged changes have been committed in this preview."
+    "Filter commits or files…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filter commits or files…"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vos modifications indexées ont été validées dans cet aperçu."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtrar commits o archivos…"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tus cambios preparados se han confirmado en esta vista previa."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtrer les commits ou fichiers…"
           }
         }
       }
     },
-    "Stage all": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Stage all"
+    "Generate message · Demo AI" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generate message · Demo AI"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tout indexer"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generar mensaje · IA de demostración"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Preparar todo"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Générer un message · IA de démonstration"
           }
         }
       }
     },
-    "Diff layout": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Diff layout"
+    "Git could not finish. Check repository access and authentication, then retry." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Git could not finish. Check repository access and authentication, then retry."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Disposition des différences"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Git no pudo finalizar. Comprueba el acceso al repositorio y la autenticación e inténtalo de nuevo."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Diseño de diferencias"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Git n’a pas pu terminer. Vérifiez l’accès au dépôt et l’authentification, puis réessayez."
           }
         }
       }
     },
-    "Split": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Split"
+    "Git operation failed" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Git operation failed"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Côte à côte"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error en la operación Git"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "En paralelo"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Échec de l’opération Git"
           }
         }
       }
     },
-    "Unified": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Unified"
+    "GRAPH" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GRAPH"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Unifiée"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GRÁFICO"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Unificada"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GRAPHE"
           }
         }
       }
     },
-    "Unstage file": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Unstage file"
+    "History" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "History"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Désindexer le fichier"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historial"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Retirar archivo del área de preparación"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historique"
           }
         }
       }
     },
-    "Stage file": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Stage file"
+    "History, changes, and conflicts are sample previews. Branch operations affect the connected repository." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "History, changes, and conflicts are sample previews. Branch operations affect the connected repository."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Indexer le fichier"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El historial, los cambios y los conflictos son ejemplos. Las operaciones con ramas afectan al repositorio conectado."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Preparar archivo"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’historique, les modifications et les conflits sont des exemples. Les opérations sur les branches affectent le dépôt connecté."
           }
         }
       }
     },
-    "Commit": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Commit"
+    "Illustrative file summary" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Illustrative file summary"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Commit"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resumen ilustrativo de archivos"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Commit"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Résumé illustratif des fichiers"
           }
         }
       }
     },
-    "staged": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "staged"
+    "Incoming branch" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Incoming branch"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "indexés"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rama entrante"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "preparados"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Branche entrante"
           }
         }
       }
     },
-    "Commit summary…": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Commit summary…"
+    "Integrate" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Integrate"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Résumé du commit…"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Integrar"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Resumen del commit…"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intégrer"
           }
         }
       }
     },
-    "Add commit graph and refine branch navigation": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Add commit graph and refine branch navigation"
+    "Load older commits" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Load older commits"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ajouter le graphe des commits et améliorer la navigation des branches"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargar commits anteriores"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Añadir el gráfico de commits y mejorar la navegación de ramas"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Charger les commits plus anciens"
           }
         }
       }
     },
-    "Generate message · Demo AI": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Generate message · Demo AI"
+    "Loading changed files…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading changed files…"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Générer un message · IA de démonstration"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargando archivos modificados…"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Generar mensaje · IA de demostración"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chargement des fichiers modifiés…"
           }
         }
       }
     },
-    "Commit staged changes": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Commit staged changes"
+    "Loading history…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading history…"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Valider les modifications indexées"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargando historial…"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Confirmar cambios preparados"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chargement de l’historique…"
           }
         }
       }
     },
-    "Preview only. No repository is modified.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Preview only. No repository is modified."
+    "LOCAL BRANCHES" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LOCAL BRANCHES"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aperçu uniquement. Aucun dépôt n’est modifié."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "RAMAS LOCALES"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Solo vista previa. No se modifica ningún repositorio."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BRANCHES LOCALES"
           }
         }
       }
     },
-    "Before": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Before"
+    "Local preview" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Local preview"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Avant"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vista previa local"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Antes"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aperçu local"
           }
         }
       }
     },
-    "Unified diff": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Unified diff"
+    "Local repository" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Local repository"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Différence unifiée"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repositorio local"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Diferencia unificada"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dépôt local"
           }
         }
       }
     },
-    "After": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "After"
+    "Local repository · Demo" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Local repository · Demo"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Après"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repositorio local · Demostración"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Después"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dépôt local · Démonstration"
           }
         }
       }
     },
-    "Conflict resolved": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Conflict resolved"
+    "Mark resolved" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mark resolved"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Conflit résolu"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marcar como resuelto"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Conflicto resuelto"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marquer comme résolu"
           }
         }
       }
     },
-    "Resolve merge conflict": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Resolve merge conflict"
+    "Merge branch feature/diff-viewer" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Merge branch feature/diff-viewer"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Résoudre le conflit de fusion"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fusionar la rama feature/diff-viewer"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Resolver conflicto de fusión"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fusionner la branche feature/diff-viewer"
           }
         }
       }
     },
-    "Demo merge · develop → feature/graph-view": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Demo merge · develop → feature/graph-view"
+    "Merge conflicts" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Merge conflicts"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Fusion de démonstration · develop → feature/graph-view"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conflictos de fusión"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Fusión de demostración · develop → feature/graph-view"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conflits de fusion"
           }
         }
       }
     },
-    "Current branch": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Current branch"
+    "Merge into current branch" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Merge into current branch"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Branche actuelle"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fusionar en la rama actual"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Rama actual"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fusionner dans la branche actuelle"
           }
         }
       }
     },
-    "Incoming branch": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Incoming branch"
+    "Merged result" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Merged result"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Branche entrante"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resultado fusionado"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Rama entrante"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Résultat fusionné"
           }
         }
       }
     },
-    "Result": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Result"
+    "No changed files" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No changed files"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Résultat"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No hay archivos modificados"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Resultado"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun fichier modifié"
           }
         }
       }
     },
-    "Suggest resolution · Demo AI": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Suggest resolution · Demo AI"
+    "No commits yet" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No commits yet"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Suggérer une résolution · IA de démonstration"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aún no hay commits"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sugerir solución · IA de demostración"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun commit pour le moment"
           }
         }
       }
     },
-    "Merged result": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Merged result"
+    "No remote" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No remote"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Résultat fusionné"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ningún repositorio remoto"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Resultado fusionado"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun dépôt distant"
           }
         }
       }
     },
-    "Review the result before marking this conflict resolved.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Review the result before marking this conflict resolved."
+    "No repository" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No repository"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vérifiez le résultat avant de marquer ce conflit comme résolu."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ningún repositorio"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Revisa el resultado antes de marcar este conflicto como resuelto."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun dépôt"
           }
         }
       }
     },
-    "Resolved": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Resolved"
+    "OK" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Résolu"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aceptar"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Resuelto"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
           }
         }
       }
     },
-    "Mark resolved": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mark resolved"
+    "Only local branches can be renamed or deleted." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Only local branches can be renamed or deleted."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Marquer comme résolu"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solo se pueden renombrar o eliminar ramas locales."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Marcar como resuelto"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seules les branches locales peuvent être renommées ou supprimées."
           }
         }
       }
     },
-    "Accept": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Accept"
+    "Open a local clone to manage its GitHub branches." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open a local clone to manage its GitHub branches."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Accepter"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre un clon local para gestionar sus ramas de GitHub."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aceptar"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrez un clone local pour gérer ses branches GitHub."
           }
         }
       }
     },
-    "Create and check out a branch in the demo workspace.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Create and check out a branch in the demo workspace."
+    "Open a repository" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open a repository"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Créez et activez une branche dans l’espace de démonstration."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir un repositorio"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Crea y activa una rama en el espacio de demostración."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrir un dépôt"
           }
         }
       }
     },
-    "Branch name": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Branch name"
+    "Open repository" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open repository"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nom de la branche"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir repositorio"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nombre de la rama"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrir un dépôt"
           }
         }
       }
     },
-    "Cancel": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cancel"
+    "Preview only. No repository is modified." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preview only. No repository is modified."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Annuler"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solo vista previa. No se modifica ningún repositorio."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cancelar"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aperçu uniquement. Aucun dépôt n’est modifié."
           }
         }
       }
     },
-    "Local preview": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Local preview"
+    "Publish the current branch to the selected remote" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Publish the current branch to the selected remote"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aperçu local"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Publicar la rama actual en el repositorio remoto seleccionado"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vista previa local"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Publier la branche actuelle sur le dépôt distant sélectionné"
           }
         }
       }
     },
-    "No repository": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "No repository"
+    "Pull" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pull"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aucun dépôt"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Traer"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ningún repositorio"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tirer"
           }
         }
       }
     },
-    "Detached HEAD": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Detached HEAD"
+    "Push" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Push"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "HEAD détachée"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enviar"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "HEAD separado"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pousser"
           }
         }
       }
     },
-    "Open repository": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Open repository"
+    "Push branch" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Push branch"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ouvrir un dépôt"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Subir rama"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abrir repositorio"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pousser la branche"
           }
         }
       }
     },
-    "Choose a configured remote.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Choose a configured remote."
+    "Rebase current branch" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rebase current branch"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Choisissez un dépôt distant configuré."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rebasar la rama actual"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Elige un repositorio remoto configurado."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rebaser la branche actuelle"
           }
         }
       }
     },
-    "Only local branches can be renamed or deleted.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Only local branches can be renamed or deleted."
+    "Refine sidebar spacing and selection" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Refine sidebar spacing and selection"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Seules les branches locales peuvent être renommées ou supprimées."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mejorar el espaciado y la selección de la barra lateral"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Solo se pueden renombrar o eliminar ramas locales."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Améliorer l’espacement et la sélection de la barre latérale"
           }
         }
       }
     },
-    "Enter a valid Git branch name.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Enter a valid Git branch name."
+    "Refresh" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Refresh"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Saisissez un nom de branche Git valide."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Actualizar"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Introduce un nombre de rama Git válido."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Actualiser"
           }
         }
       }
     },
-    "Git could not finish. Check repository access and authentication, then retry.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Git could not finish. Check repository access and authentication, then retry."
+    "Remote" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remote"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Git n’a pas pu terminer. Vérifiez l’accès au dépôt et l’authentification, puis réessayez."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repositorio remoto"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Git no pudo finalizar. Comprueba el acceso al repositorio y la autenticación e inténtalo de nuevo."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dépôt distant"
           }
         }
       }
     },
-    "History, changes, and conflicts are sample previews. Branch operations affect the connected repository.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "History, changes, and conflicts are sample previews. Branch operations affect the connected repository."
+    "REMOTE BRANCHES" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "REMOTE BRANCHES"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "L’historique, les modifications et les conflits sont des exemples. Les opérations sur les branches affectent le dépôt connecté."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "RAMAS REMOTAS"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "El historial, los cambios y los conflictos son ejemplos. Las operaciones con ramas afectan al repositorio conectado."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BRANCHES DISTANTES"
           }
         }
       }
     },
-    "Git operation failed": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Git operation failed"
+    "REMOTES" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "REMOTES"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Échec de l’opération Git"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "REMOTOS"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Error en la operación Git"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DÉPÔTS DISTANTS"
           }
         }
       }
     },
-    "Refresh": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Refresh"
+    "Rename" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rename"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Actualiser"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renombrar"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Actualizar"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renommer"
           }
         }
       }
     },
-    "Remote": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Remote"
+    "Rename branch" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rename branch"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dépôt distant"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renombrar rama"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Repositorio remoto"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renommer la branche"
           }
         }
       }
     },
-    "No remote": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "No remote"
+    "Renaming affects the local branch only." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renaming affects the local branch only."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aucun dépôt distant"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El cambio de nombre solo afecta a la rama local."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ningún repositorio remoto"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le changement de nom affecte uniquement la branche locale."
           }
         }
       }
     },
-    "Push branch": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Push branch"
+    "Repository history" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repository history"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pousser la branche"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historial del repositorio"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Subir rama"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historique du dépôt"
           }
         }
       }
     },
-    "Publish the current branch to the selected remote": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Publish the current branch to the selected remote"
+    "Resolve merge conflict" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resolve merge conflict"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Publier la branche actuelle sur le dépôt distant sélectionné"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resolver conflicto de fusión"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Publicar la rama actual en el repositorio remoto seleccionado"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Résoudre le conflit de fusion"
           }
         }
       }
     },
-    "Open a local clone to manage its GitHub branches.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Open a local clone to manage its GitHub branches."
+    "Resolved" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resolved"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ouvrez un clone local pour gérer ses branches GitHub."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resuelto"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abre un clon local para gestionar sus ramas de GitHub."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Résolu"
           }
         }
       }
     },
-    "REMOTE BRANCHES": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "REMOTE BRANCHES"
+    "Result" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Result"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "BRANCHES DISTANTES"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resultado"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "RAMAS REMOTAS"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Résultat"
           }
         }
       }
     },
-    "Fetch to update remote branches.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Fetch to update remote branches."
+    "Retry" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retry"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Récupérez les données pour actualiser les branches distantes."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reintentar"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Obtén los cambios para actualizar las ramas remotas."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réessayer"
           }
         }
       }
     },
-    "Check out branch": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Check out branch"
+    "Review changes. Resolve conflicts. Keep moving." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Review changes. Resolve conflicts. Keep moving."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Basculer sur la branche"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Revisa los cambios. Resuelve los conflictos. Sigue adelante."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cambiar a la rama"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Révisez les modifications. Résolvez les conflits. Avancez."
           }
         }
       }
     },
-    "Rename branch": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Rename branch"
+    "Review the result before marking this conflict resolved." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Review the result before marking this conflict resolved."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Renommer la branche"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Revisa el resultado antes de marcar este conflicto como resuelto."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Renombrar rama"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vérifiez le résultat avant de marquer ce conflit comme résolu."
           }
         }
       }
     },
-    "Delete local branch": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Delete local branch"
+    "REVISION" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "REVISION"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Supprimer la branche locale"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "REVISIÓN"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Eliminar rama local"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "RÉVISION"
           }
         }
       }
     },
-    "Rename": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Rename"
+    "Running Git…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Running Git…"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Renommer"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ejecutando Git…"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Renombrar"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Git en cours…"
           }
         }
       }
     },
-    "Renaming affects the local branch only.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Renaming affects the local branch only."
+    "Sample commit from the demo repository." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sample commit from the demo repository."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Le changement de nom affecte uniquement la branche locale."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commit de ejemplo del repositorio de demostración."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "El cambio de nombre solo afecta a la rama local."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exemple de commit du dépôt de démonstration."
           }
         }
       }
     },
-    "Delete local branch?": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Delete local branch?"
+    "Search covers loaded commits. Load older commits to search further." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search covers loaded commits. Load older commits to search further."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Supprimer la branche locale ?"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La búsqueda abarca los commits cargados. Carga commits anteriores para ampliar la búsqueda."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "¿Eliminar la rama local?"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La recherche porte sur les commits chargés. Chargez les commits plus anciens pour élargir la recherche."
           }
         }
       }
     },
-    "The remote branch is preserved. Git will refuse to delete an unmerged branch.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "The remote branch is preserved. Git will refuse to delete an unmerged branch."
+    "Set up app theme and typography" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set up app theme and typography"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "La branche distante est conservée. Git refusera de supprimer une branche non fusionnée."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configurar el tema y la tipografía de la aplicación"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "La rama remota se conserva. Git rechazará eliminar una rama sin fusionar."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configurer le thème et la typographie de l’application"
           }
         }
       }
     },
-    "Create and check out a local branch from the current HEAD. Push to publish it on GitHub.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Create and check out a local branch from the current HEAD. Push to publish it on GitHub."
+    "Split" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Split"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Créez une branche locale depuis HEAD et basculez dessus. Poussez-la pour la publier sur GitHub."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En paralelo"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Crea una rama local desde el HEAD actual y cambia a ella. Súbela para publicarla en GitHub."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Côte à côte"
           }
         }
       }
     },
-    "Running Git…": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Running Git…"
+    "Stage all" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stage all"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Git en cours…"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preparar todo"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ejecutando Git…"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tout indexer"
           }
         }
       }
     },
-    "Branch management": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Branch management"
+    "Stage file" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stage file"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gestion des branches"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preparar archivo"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gestión de ramas"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indexer le fichier"
           }
         }
       }
     },
-    "Local repository": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Local repository"
+    "staged" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "staged"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dépôt local"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "preparados"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Repositorio local"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "indexés"
+          }
+        }
+      }
+    },
+    "Suggest resolution · Demo AI" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suggest resolution · Demo AI"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sugerir solución · IA de demostración"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suggérer une résolution · IA de démonstration"
+          }
+        }
+      }
+    },
+    "Support side-by-side file comparison" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support side-by-side file comparison"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permitir la comparación de archivos en paralelo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permettre la comparaison des fichiers côte à côte"
+          }
+        }
+      }
+    },
+    "The remote branch is preserved. Git will refuse to delete an unmerged branch." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The remote branch is preserved. Git will refuse to delete an unmerged branch."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La rama remota se conserva. Git rechazará eliminar una rama sin fusionar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La branche distante est conservée. Git refusera de supprimer une branche non fusionnée."
+          }
+        }
+      }
+    },
+    "This is a UI preview. Connect a repository to enable Git operations." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is a UI preview. Connect a repository to enable Git operations."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta es una vista previa de la interfaz. Conecta un repositorio para activar las operaciones Git."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ceci est un aperçu de l’interface. Connectez un dépôt pour activer les opérations Git."
+          }
+        }
+      }
+    },
+    "Unified" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unified"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unificada"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unifiée"
+          }
+        }
+      }
+    },
+    "Unified diff" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unified diff"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diferencia unificada"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Différence unifiée"
+          }
+        }
+      }
+    },
+    "Unstage file" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unstage file"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retirar archivo del área de preparación"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Désindexer le fichier"
+          }
+        }
+      }
+    },
+    "Working changes" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Working changes"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cambios locales"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifications locales"
+          }
+        }
+      }
+    },
+    "WORKSPACE" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WORKSPACE"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ESPACIO DE TRABAJO"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ESPACE DE TRAVAIL"
+          }
+        }
+      }
+    },
+    "Workspace view" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Workspace view"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vista del espacio de trabajo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vue de l’espace de travail"
+          }
+        }
+      }
+    },
+    "You" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tú"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vous"
+          }
+        }
+      }
+    },
+    "Your staged changes have been committed in this preview." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your staged changes have been committed in this preview."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tus cambios preparados se han confirmado en esta vista previa."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vos modifications indexées ont été validées dans cet aperçu."
+          }
+        }
+      }
+    },
+    "Your workflow, in focus." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your workflow, in focus."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu trabajo, con claridad."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Votre travail, en toute clarté."
           }
         }
       }
     }
   },
-  "version": "1.0"
+  "version" : "1.0"
 }

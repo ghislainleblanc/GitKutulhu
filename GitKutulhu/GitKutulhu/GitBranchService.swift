@@ -53,6 +53,35 @@ actor GitBranchService {
         return GitRepositorySnapshot(root: root, currentBranch: current.isEmpty ? nil : current, branches: branches, remotes: remotes)
     }
 
+    func history(at root: URL, skip: Int) throws -> [GitCommit] {
+        let head = try run(["rev-parse", "--verify", "--quiet", "HEAD"], at: root, allowedStatuses: [0, 1])
+        var arguments = ["log", "--all", "--topo-order", "--max-count=201", "--skip=\(skip)", "--no-show-signature", "--decorate=short", "--format=%H%x00%P%x00%an%x00%ae%x00%at%x00%s%x00%B%x00%D", "-z"]
+        if !head.isEmpty {
+            arguments.append("HEAD")
+        }
+        arguments.append("--")
+        let output = try run(arguments, at: root)
+        let fields = output.components(separatedBy: "\0")
+        return stride(from: 0, to: fields.count - 1, by: 8).compactMap { index in
+            guard index + 7 < fields.count, let timestamp = Double(fields[index + 4]) else { return nil }
+            return GitCommit(id: fields[index], parents: fields[index + 1].split(separator: " ").map(String.init), author: fields[index + 2], email: fields[index + 3], date: Date(timeIntervalSince1970: timestamp), title: fields[index + 5], message: fields[index + 6].trimmingCharacters(in: .newlines), references: fields[index + 7])
+        }
+    }
+
+    func changedFiles(for commit: GitCommit, at root: URL) throws -> [GitCommitFile] {
+        let arguments: [String] = if let parent = commit.parents.first {
+            // Merge summaries compare with the first parent, including merge resolutions.
+            ["diff", "--numstat", "-z", "--no-renames", "--no-ext-diff", "--no-textconv", parent, commit.id, "--"]
+        } else {
+            ["diff-tree", "--root", "--no-commit-id", "-r", "--numstat", "-z", "--no-renames", "--no-ext-diff", "--no-textconv", commit.id, "--"]
+        }
+        return try run(arguments, at: root).split(separator: "\0").compactMap { record in
+            let fields = record.split(separator: "\t", maxSplits: 2, omittingEmptySubsequences: false)
+            guard fields.count == 3 else { return nil }
+            return GitCommitFile(id: String(fields[2]), additions: Int(fields[0]), deletions: Int(fields[1]))
+        }
+    }
+
     func create(_ name: String, at root: URL) throws {
         try validate(name, at: root)
 

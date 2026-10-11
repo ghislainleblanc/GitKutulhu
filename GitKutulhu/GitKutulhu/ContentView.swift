@@ -25,12 +25,12 @@ struct ContentView: View {
 
                     Divider()
 
-                    Text("History, changes, and conflicts are sample previews. Branch operations affect the connected repository.")
+                    Text("Changes and conflicts are sample previews. History and branch operations use the connected repository.")
                         .font(.caption).foregroundStyle(Palette.muted).padding(10)
 
                     switch section {
                     case .history:
-                        HistoryView(search: search)
+                        HistoryView(repository: branches.repository, revision: branches.revision, search: search)
                     case .changes:
                         ChangesView(workspace: $workspace, search: search)
                     case .conflicts:

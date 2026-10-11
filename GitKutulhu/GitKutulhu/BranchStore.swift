@@ -4,7 +4,11 @@ import Observation
 @MainActor
 @Observable
 final class BranchStore {
-    private(set) var repository: GitRepositorySnapshot?
+    private(set) var repository: GitRepositorySnapshot? {
+        didSet { revision = UUID() }
+    }
+
+    private(set) var revision = UUID()
     private(set) var isBusy = false
     var error: String?
     var selectedRemote = ""
