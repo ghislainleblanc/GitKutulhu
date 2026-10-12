@@ -74,8 +74,6 @@ struct RepositorySidebar: View {
                     SidebarItem(title: "Commit history", icon: "clock.arrow.circlepath", selected: section == .history) { section = .history }
 
                     SidebarItem(title: "Working changes", icon: "square.and.pencil", selected: section == .changes) { section = .changes }
-
-                    SidebarItem(title: "Merge conflicts", icon: "exclamationmark.triangle", selected: section == .conflicts) { section = .conflicts }
                 }
 
                 VStack(alignment: .leading, spacing: 10) {

@@ -30,7 +30,7 @@ struct ChangesView: View {
                         }
 
                         if store.hasConflicts {
-                            Text("Resolve conflicts in your editor, then stage the resolved files. The Conflicts tab is a preview.")
+                            Text("Resolve conflicts in your editor, then stage the resolved files.")
                                 .font(.caption).foregroundStyle(.orange).padding()
                         }
 

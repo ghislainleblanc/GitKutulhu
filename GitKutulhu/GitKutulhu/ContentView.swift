@@ -37,7 +37,6 @@ struct ContentView: View {
 
 struct RepositoryWorkspaceView: View {
     @Bindable var session: RepositorySession
-    @State private var workspace = DemoWorkspace()
     @State private var showsBranchSheet = false
     @State private var branchName = ""
 
@@ -65,7 +64,7 @@ struct RepositoryWorkspaceView: View {
                     if branches.repository == nil {
                         RepositoryUnavailableView(session: session)
                     } else {
-                        RepositorySectionView(session: session, workspace: $workspace)
+                        RepositorySectionView(session: session)
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -104,7 +103,6 @@ struct RepositoryWorkspaceView: View {
 
 struct RepositorySectionView: View {
     let session: RepositorySession
-    @Binding var workspace: DemoWorkspace
 
     var body: some View {
         switch session.section {
@@ -113,14 +111,6 @@ struct RepositorySectionView: View {
 
         case .changes:
             ChangesView(branches: session.branches, store: session.changes, search: session.search)
-
-        case .conflicts:
-            VStack(spacing: 0) {
-                Text("Conflict resolution is a sample preview. No repository is modified here.")
-                    .font(.caption).foregroundStyle(Palette.muted).padding(10)
-
-                ConflictView(workspace: $workspace)
-            }
         }
     }
 }

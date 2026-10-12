@@ -120,12 +120,10 @@ in the same repository.
 
 Unresolved files are marked `U`. Resolve them in an external editor and stage
 each resolved file; commits and **Stage all** are disabled while conflicts remain.
-The Conflicts tab is still an explicitly labeled sample preview, including its
-AI controls. It never modifies the connected repository. Pull, merge, and rebase
-actions are not exposed yet. The Changes tab has no simulated AI controls.
+Pull, merge, and rebase actions are not exposed yet.
 
-UI components are grouped by workflow in `HistoryView.swift`, `ChangesView.swift`,
-and `ConflictView.swift`. Git operations are in `GitBranchService.swift`, observed
+UI components are grouped by workflow in `HistoryView.swift` and `ChangesView.swift`.
+Git operations are in `GitBranchService.swift`, observed
 repository state is in `BranchStore.swift`, and changes/diff state is in
 `GitChanges.swift`. Format touched Swift files using the root `.swiftformat`.
 

@@ -45,28 +45,6 @@
         }
       }
     },
-    "Accept" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Accept"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aceptar"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Accepter"
-          }
-        }
-      }
-    },
     "Add commit graph and branch lanes" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -397,29 +375,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Modifications"
-          }
-        }
-      }
-    },
-    "Changes and conflicts are sample previews. History and branch operations use the connected repository." : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Changes and conflicts are sample previews. History and branch operations use the connected repository."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Los cambios y conflictos son vistas de demostración. El historial y las operaciones de ramas usan el repositorio conectado."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Les modifications et les conflits sont des aperçus de démonstration. L’historique et les opérations sur les branches utilisent le dépôt connecté."
           }
         }
       }
@@ -886,72 +841,6 @@
         }
       }
     },
-    "Conflict resolution is a sample preview. No repository is modified here." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Conflict resolution is a sample preview. No repository is modified here."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La resolución de conflictos es una demostración. Aquí no se modifica ningún repositorio."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La résolution des conflits est une démonstration. Aucun dépôt n’est modifié ici."
-          }
-        }
-      }
-    },
-    "Conflict resolved" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Conflict resolved"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Conflicto resuelto"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Conflit résolu"
-          }
-        }
-      }
-    },
-    "Conflicts" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Conflicts"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Conflictos"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Conflits"
-          }
-        }
-      }
-    },
     "Could not open repository" : {
       "localizations" : {
         "en" : {
@@ -1064,28 +953,6 @@
         }
       }
     },
-    "Current branch" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Current branch"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rama actual"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Branche actuelle"
-          }
-        }
-      }
-    },
     "Delete local branch" : {
       "localizations" : {
         "en" : {
@@ -1149,28 +1016,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Commit de démonstration créé"
-          }
-        }
-      }
-    },
-    "Demo merge · develop → feature/graph-view" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Demo merge · develop → feature/graph-view"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fusión de demostración · develop → feature/graph-view"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fusion de démonstration · develop → feature/graph-view"
           }
         }
       }
@@ -1551,29 +1396,6 @@
         }
       }
     },
-    "History, changes, and conflicts are sample previews. Branch operations affect the connected repository." : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "History, changes, and conflicts are sample previews. Branch operations affect the connected repository."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "El historial, los cambios y los conflictos son ejemplos. Las operaciones con ramas afectan al repositorio conectado."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "L’historique, les modifications et les conflits sont des exemples. Les opérations sur les branches affectent le dépôt connecté."
-          }
-        }
-      }
-    },
     "Illustrative file summary" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -1593,28 +1415,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Résumé illustratif des fichiers"
-          }
-        }
-      }
-    },
-    "Incoming branch" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Incoming branch"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rama entrante"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Branche entrante"
           }
         }
       }
@@ -1798,28 +1598,6 @@
         }
       }
     },
-    "Mark resolved" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mark resolved"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Marcar como resuelto"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Marquer comme résolu"
-          }
-        }
-      }
-    },
     "Merge branch feature/diff-viewer" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -1843,28 +1621,6 @@
         }
       }
     },
-    "Merge conflicts" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Merge conflicts"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Conflictos de fusión"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Conflits de fusion"
-          }
-        }
-      }
-    },
     "Merge into current branch" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -1884,28 +1640,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fusionner dans la branche actuelle"
-          }
-        }
-      }
-    },
-    "Merged result" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Merged result"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Resultado fusionado"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Résultat fusionné"
           }
         }
       }
@@ -2665,73 +2399,30 @@
         }
       }
     },
-    "Resolve conflicts in your editor, then stage the resolved files. The Conflicts tab is a preview." : {
+    "Resolve conflicts in your editor, then stage the resolved files." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Resolve conflicts in your editor, then stage the resolved files. The Conflicts tab is a preview."
+            "value" : "Resolve conflicts in your editor, then stage the resolved files."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Resuelve los conflictos en tu editor y prepara los archivos resueltos. La pestaña Conflictos es una demostración."
+            "value" : "Resuelve los conflictos en tu editor y prepara los archivos resueltos."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Résolvez les conflits dans votre éditeur, puis indexez les fichiers résolus. L’onglet Conflits est une démonstration."
-          }
-        }
-      }
-    },
-    "Resolve merge conflict" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Resolve merge conflict"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Resolver conflicto de fusión"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Résoudre le conflit de fusion"
-          }
-        }
-      }
-    },
-    "Resolved" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Resolved"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Resuelto"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Résolu"
+            "value" : "Résolvez les conflits dans votre éditeur, puis indexez les fichiers résolus."
           }
         }
       }
     },
     "Result" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2771,51 +2462,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Réessayer"
-          }
-        }
-      }
-    },
-    "Review changes. Resolve conflicts. Keep moving." : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Review changes. Resolve conflicts. Keep moving."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Revisa los cambios. Resuelve los conflictos. Sigue adelante."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Révisez les modifications. Résolvez les conflits. Avancez."
-          }
-        }
-      }
-    },
-    "Review the result before marking this conflict resolved." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Review the result before marking this conflict resolved."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Revisa el resultado antes de marcar este conflicto como resuelto."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vérifiez le résultat avant de marquer ce conflit comme résolu."
           }
         }
       }
@@ -3060,28 +2706,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Modifications indexées"
-          }
-        }
-      }
-    },
-    "Suggest resolution · Demo AI" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Suggest resolution · Demo AI"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sugerir solución · IA de demostración"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Suggérer une résolution · IA de démonstration"
           }
         }
       }

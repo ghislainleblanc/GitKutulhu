@@ -1,7 +1,7 @@
 import SwiftUI
 
 enum WorkspaceSection: String, CaseIterable, Identifiable {
-    case history, changes, conflicts
+    case history, changes
 
     var id: Self {
         self
@@ -11,12 +11,6 @@ enum WorkspaceSection: String, CaseIterable, Identifiable {
         switch self {
         case .history: "History"
         case .changes: "Changes"
-        case .conflicts: "Conflicts"
         }
     }
-}
-
-struct DemoWorkspace {
-    var resolved = false
-    var resolution = ""
 }
