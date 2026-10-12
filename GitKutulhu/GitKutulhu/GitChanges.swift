@@ -120,7 +120,7 @@ final class ChangesStore {
         }
 
         error = nil
-        isLoading = true
+        isLoading = files.isEmpty
 
         guard let root else {
             isLoading = false
@@ -132,7 +132,9 @@ final class ChangesStore {
 
             guard self.request == request, !Task.isCancelled else { return }
 
-            self.files = files
+            if self.files != files {
+                self.files = files
+            }
 
             if !files.contains(where: { $0.id == selectedID }) {
                 selectedID = files.first?.id
@@ -159,19 +161,23 @@ final class ChangesStore {
             return
         }
 
-        if displayedID != file.id {
+        let isChangingFile = displayedID != file.id
+
+        if isChangingFile {
             patch = ""
         }
 
         displayedID = file.id
-        isLoadingDiff = true
+        isLoadingDiff = isChangingFile
 
         do {
             let patch = try await service.workingDiff(for: file, at: root)
 
             guard diffRequest == request, !Task.isCancelled, selectedID == file.id else { return }
 
-            self.patch = patch
+            if self.patch != patch {
+                self.patch = patch
+            }
         } catch {
             guard diffRequest == request, !Task.isCancelled, selectedID == file.id else { return }
 

@@ -104,7 +104,7 @@ struct CommitRow: View {
             VStack(alignment: .leading, spacing: 5) {
                 Text(verbatim: commit.title).lineLimit(1).font(.callout.weight(.medium))
                 HStack {
-                    Text(commit.date, style: .relative)
+                    Text(verbatim: commit.date.formatted(.relative(presentation: .named)))
                     if !commit.references.isEmpty {
                         Text(verbatim: commit.references).lineLimit(1).foregroundStyle(Palette.accent)
                     }
