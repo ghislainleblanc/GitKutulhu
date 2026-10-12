@@ -86,6 +86,7 @@ final class ChangesStore {
     private var request = UUID()
     private var diffRequest = UUID()
     private var displayedID: String?
+    private var hasLoaded = false
     private let service = GitBranchService()
 
     var repositoryRoot: URL? {
@@ -117,13 +118,22 @@ final class ChangesStore {
             diffError = nil
             diffRequest = UUID()
             isLoadingDiff = false
+            hasLoaded = false
         }
 
-        error = nil
-        isLoading = files.isEmpty
+        if error != nil {
+            error = nil
+        }
+
+        if !hasLoaded, !isLoading {
+            isLoading = true
+        }
 
         guard let root else {
-            isLoading = false
+            if isLoading {
+                isLoading = false
+            }
+
             return
         }
 
@@ -137,15 +147,27 @@ final class ChangesStore {
             }
 
             if !files.contains(where: { $0.id == selectedID }) {
-                selectedID = files.first?.id
+                let nextSelectedID = files.first?.id
+
+                if selectedID != nextSelectedID {
+                    selectedID = nextSelectedID
+                }
             }
         } catch {
             guard self.request == request, !Task.isCancelled else { return }
 
-            self.error = error.localizedDescription
+            let description = error.localizedDescription
+
+            if self.error != description {
+                self.error = description
+            }
         }
 
-        isLoading = false
+        hasLoaded = true
+
+        if isLoading {
+            isLoading = false
+        }
 
         await loadDiff()
     }
@@ -153,11 +175,19 @@ final class ChangesStore {
     func loadDiff() async {
         let request = UUID()
         diffRequest = request
-        diffError = nil
+        if diffError != nil {
+            diffError = nil
+        }
 
         guard let root, let file = selectedFile else {
-            patch = ""
-            isLoadingDiff = false
+            if !patch.isEmpty {
+                patch = ""
+            }
+
+            if isLoadingDiff {
+                isLoadingDiff = false
+            }
+
             return
         }
 
@@ -167,8 +197,10 @@ final class ChangesStore {
             patch = ""
         }
 
-        displayedID = file.id
-        isLoadingDiff = isChangingFile
+        if isChangingFile {
+            displayedID = file.id
+            isLoadingDiff = true
+        }
 
         do {
             let patch = try await service.workingDiff(for: file, at: root)
@@ -181,10 +213,19 @@ final class ChangesStore {
         } catch {
             guard diffRequest == request, !Task.isCancelled, selectedID == file.id else { return }
 
-            patch = ""
-            diffError = error.localizedDescription
+            if !patch.isEmpty {
+                patch = ""
+            }
+
+            let description = error.localizedDescription
+
+            if diffError != description {
+                diffError = description
+            }
         }
 
-        isLoadingDiff = false
+        if isLoadingDiff {
+            isLoadingDiff = false
+        }
     }
 }
